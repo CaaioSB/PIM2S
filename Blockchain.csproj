@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9938C04A-99E0-4EB8-A56F-0B4D35C6964C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ModernFluid</RootNamespace>
-    <AssemblyName>ModernFluid</AssemblyName>
+    <RootNamespace>Blockchain</RootNamespace>
+    <AssemblyName>Blockchain</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,20 +55,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Button_FAWS.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Button_WOC.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ModernPanel.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,13 +91,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unDrawMale.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\male.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\verific.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\uiCSB\uiCSB.csproj">
+      <Project>{3aa38f95-836e-456b-ac6d-856f88516056}</Project>
+      <Name>uiCSB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

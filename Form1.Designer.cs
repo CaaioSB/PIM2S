@@ -1,4 +1,4 @@
-﻿namespace ModernFluid
+﻿namespace Blockchain
 {
     partial class Form1
     {
@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPicture1 = new ModernFluid.IconPicture();
-            this.iconPicture2 = new ModernFluid.IconPicture();
-            this.modernPanel1 = new ModernFluid.ModernPanel();
+            this.iconPicture2 = new uiCSB.uiPicture();
+            this.modernPanel1 = new uiCSB.uiPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconPicture1 = new uiCSB.uiPicture();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).BeginInit();
             this.modernPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPicture1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,55 +59,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Caio Silva";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ModernFluid.Properties.Resources.male;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox2.Location = new System.Drawing.Point(16, 25);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox2.TabIndex = 1;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconPicture1
-            // 
-            this.iconPicture1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.iconPicture1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.iconPicture1.IconChar = FontAwesome.Sharp.IconChar.Btc;
-            this.iconPicture1.IconColor = System.Drawing.Color.White;
-            this.iconPicture1.IconSize = 30;
-            this.iconPicture1.Location = new System.Drawing.Point(1, 187);
-            this.iconPicture1.Name = "iconPicture1";
-            this.iconPicture1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.iconPicture1.Rounded = false;
-            this.iconPicture1.Size = new System.Drawing.Size(82, 71);
-            this.iconPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconPicture1.TabIndex = 2;
-            this.iconPicture1.TabStop = false;
-            // 
             // iconPicture2
             // 
             this.iconPicture2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -117,7 +68,7 @@
             this.iconPicture2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
             this.iconPicture2.IconChar = FontAwesome.Sharp.IconChar.Bell;
             this.iconPicture2.IconColor = System.Drawing.Color.White;
-            this.iconPicture2.IconSize = 30;
+            this.iconPicture2.IconSize = 40;
             this.iconPicture2.Location = new System.Drawing.Point(809, 17);
             this.iconPicture2.Name = "iconPicture2";
             this.iconPicture2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
@@ -165,13 +116,62 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::ModernFluid.Properties.Resources.verific;
+            this.pictureBox2.Image = global::Blockchain.Properties.Resources.verific;
             this.pictureBox2.Location = new System.Drawing.Point(17, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(108, 103);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.Location = new System.Drawing.Point(16, 25);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox2.TabIndex = 1;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Caio Silva";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Blockchain.Properties.Resources.male;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // iconPicture1
+            // 
+            this.iconPicture1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.iconPicture1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.iconPicture1.IconChar = FontAwesome.Sharp.IconChar.Btc;
+            this.iconPicture1.IconColor = System.Drawing.Color.White;
+            this.iconPicture1.IconSize = 30;
+            this.iconPicture1.Location = new System.Drawing.Point(1, 187);
+            this.iconPicture1.Name = "iconPicture1";
+            this.iconPicture1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.iconPicture1.Rounded = false;
+            this.iconPicture1.Size = new System.Drawing.Size(82, 71);
+            this.iconPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPicture1.TabIndex = 2;
+            this.iconPicture1.TabStop = false;
             // 
             // Form1
             // 
@@ -189,13 +189,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).EndInit();
             this.modernPanel1.ResumeLayout(false);
             this.modernPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPicture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,13 +206,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private IconPicture iconPicture1;
+        private uiCSB.uiPicture iconPicture1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ModernPanel modernPanel1;
+        private uiCSB.uiPanel modernPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private IconPicture iconPicture2;
+        private uiCSB.uiPicture iconPicture2;
     }
 }
 
