@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FontAwesome.Sharp">
       <HintPath>packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -55,16 +55,44 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Control\uctBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\uctBase.Designer.cs">
+      <DependentUpon>uctBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\uctBlockchain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\uctBlockchain.Designer.cs">
+      <DependentUpon>uctBlockchain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmAcesso.Designer.cs">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Util\Util.cs" />
+    <EmbeddedResource Include="Control\uctBase.resx">
+      <DependentUpon>uctBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\uctBlockchain.resx">
+      <DependentUpon>uctBlockchain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmAcesso.resx">
+      <DependentUpon>frmAcesso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +125,9 @@
     <None Include="Resources\verific.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\spreadshet.png" />
+    <None Include="Resources\securityon.png" />
+    <None Include="Resources\authentication.png" />
     <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <ItemGroup>
@@ -105,5 +136,6 @@
       <Name>uiCSB</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

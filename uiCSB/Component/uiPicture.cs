@@ -1,26 +1,21 @@
 ﻿using System;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace uiCSB
+namespace uiCSB.Component
 {
     public class uiPicture : FontAwesome.Sharp.IconPictureBox
     {
         public bool _isHovering;
 
-        private Color _buttonColor = Color.Red;
-        private Color _onHoverButtonColor = Color.Yellow;
+        private Color _buttonColor = Color.FromArgb(72, 84, 179);
+        private Color _onHoverButtonColor = Color.FromArgb(72, 65, 179);
         private bool _roundedBorder = false;
+        private int _size = 10;
 
         public uiPicture()
         {
-
-            //FlatStyle = FlatStyle.Flat;
-            //FlatAppearance.MouseOverBackColor = Color.Transparent;
-            //FlatAppearance.MouseDownBackColor = Color.Transparent;
-            //FlatAppearance.BorderSize = 0;
-
             DoubleBuffered = true;
             MouseEnter += (sender, e) =>
             {
@@ -66,6 +61,16 @@ namespace uiCSB
             }
         }
 
+        public int uiSize
+        {
+            get => _size;
+            set
+            {
+                _size = value;
+                Invalidate();
+            }
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -75,17 +80,23 @@ namespace uiCSB
 
             if (Rounded)
             {
-                using (var gp = new GraphicsPath())
-                {
-                    gp.AddEllipse(new Rectangle(0, 0, Width, Height));
-                    this.Region = new Region(gp);
-                };
+                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 5, 5));
             }
             else
             {
-
-            IconSize = 30;
+                IconSize = _size + 0;
             }
         }
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
     }
 }

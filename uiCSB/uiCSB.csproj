@@ -32,7 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp">
-      <HintPath>..\ModernFluid\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,16 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="uiPicture.cs">
+    <Compile Include="Component\uiPicture.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="uiButton.cs">
+    <Compile Include="Component\uiButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="uiPanel.cs">
+    <Compile Include="Component\uiPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\uiTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\RoundedForm.cs" />
+    <Compile Include="Util\RoundedRectangle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
