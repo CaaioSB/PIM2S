@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blockchain", "Blockchain.csproj", "{9938C04A-99E0-4EB8-A56F-0B4D35C6964C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uiCSB", "..\uiCSB\uiCSB.csproj", "{3AA38F95-836E-456B-AC6D-856F88516056}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uiCSB", "uiCSB\uiCSB.csproj", "{3AA38F95-836E-456B-AC6D-856F88516056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

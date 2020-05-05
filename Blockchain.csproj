@@ -97,13 +97,13 @@
     <None Include="Resources\verific.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\uiCSB\uiCSB.csproj">
+    <Content Include="Resources\unDrawMale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="uiCSB\uiCSB.csproj">
       <Project>{3aa38f95-836e-456b-ac6d-856f88516056}</Project>
       <Name>uiCSB</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
