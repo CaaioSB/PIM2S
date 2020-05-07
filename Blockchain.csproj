@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +33,32 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp">
@@ -67,6 +95,12 @@
     <Compile Include="Control\uctBlockchain.Designer.cs">
       <DependentUpon>uctBlockchain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\uctLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\uctLogin.Designer.cs">
+      <DependentUpon>uctLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\uctBlockchain.resx">
       <DependentUpon>uctBlockchain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\uctLogin.resx">
+      <DependentUpon>uctLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
@@ -128,6 +165,11 @@
     <None Include="Resources\spreadshet.png" />
     <None Include="Resources\securityon.png" />
     <None Include="Resources\authentication.png" />
+    <None Include="Resources\teste.png" />
+    <None Include="Resources\teste1.png" />
+    <None Include="Resources\teste2.png" />
+    <None Include="Resources\teste3.png" />
+    <None Include="Resources\teste4.png" />
     <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <ItemGroup>

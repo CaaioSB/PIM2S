@@ -16,12 +16,19 @@ namespace uiCSB.Component
         {
             base.OnPaint(e);
             OnCreateControl();
-        }
+            Invalidate();}
 
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(2, 3, Width, Height -3, 5, 5));
+            Region = Region.FromHrgn(CreateRoundRectRgn(2, 3, Width, Height -3, 5, 5));
+            Invalidate();
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            OnCreateControl();
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]

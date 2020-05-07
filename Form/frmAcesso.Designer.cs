@@ -34,11 +34,11 @@
             this.uiLogin = new uiCSB.Component.uiButton();
             this.uiTextBox2 = new uiCSB.Component.uiTextBox();
             this.uiTextBox1 = new uiCSB.Component.uiTextBox();
-            this.uiButton5 = new uiCSB.Component.uiButton();
-            this.uiButton4 = new uiCSB.Component.uiButton();
-            this.uiButton3 = new uiCSB.Component.uiButton();
-            this.uiButton2 = new uiCSB.Component.uiButton();
-            this.uiButton1 = new uiCSB.Component.uiButton();
+            this.ui8or9 = new uiCSB.Component.uiButton();
+            this.ui6or7 = new uiCSB.Component.uiButton();
+            this.ui4or5 = new uiCSB.Component.uiButton();
+            this.ui2or3 = new uiCSB.Component.uiButton();
+            this.ui0or1 = new uiCSB.Component.uiButton();
             this.uiPanel1 = new uiCSB.Component.uiPanel();
             this.uiExit = new uiCSB.Component.uiButton();
             this.lblDescControl = new System.Windows.Forms.Label();
@@ -56,11 +56,11 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.uiTextBox2);
             this.panel1.Controls.Add(this.uiTextBox1);
-            this.panel1.Controls.Add(this.uiButton5);
-            this.panel1.Controls.Add(this.uiButton4);
-            this.panel1.Controls.Add(this.uiButton3);
-            this.panel1.Controls.Add(this.uiButton2);
-            this.panel1.Controls.Add(this.uiButton1);
+            this.panel1.Controls.Add(this.ui8or9);
+            this.panel1.Controls.Add(this.ui6or7);
+            this.panel1.Controls.Add(this.ui4or5);
+            this.panel1.Controls.Add(this.ui2or3);
+            this.panel1.Controls.Add(this.ui0or1);
             this.panel1.Controls.Add(this.uiPanel1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -134,105 +134,105 @@
             this.uiTextBox1.Size = new System.Drawing.Size(399, 25);
             this.uiTextBox1.TabIndex = 7;
             // 
-            // uiButton5
+            // ui8or9
             // 
-            this.uiButton5.BorderColor = System.Drawing.Color.White;
-            this.uiButton5.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton5.FlatAppearance.BorderSize = 0;
-            this.uiButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton5.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton5.Location = new System.Drawing.Point(383, 243);
-            this.uiButton5.Name = "uiButton5";
-            this.uiButton5.OnHoverBorderColor = System.Drawing.Color.White;
-            this.uiButton5.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton5.Size = new System.Drawing.Size(75, 43);
-            this.uiButton5.TabIndex = 5;
-            this.uiButton5.Text = "8 ou 9";
-            this.uiButton5.TextColor = System.Drawing.Color.White;
-            this.uiButton5.UseVisualStyleBackColor = false;
+            this.ui8or9.BorderColor = System.Drawing.Color.White;
+            this.ui8or9.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.ui8or9.FlatAppearance.BorderSize = 0;
+            this.ui8or9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ui8or9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ui8or9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ui8or9.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ui8or9.Location = new System.Drawing.Point(383, 243);
+            this.ui8or9.Name = "ui8or9";
+            this.ui8or9.OnHoverBorderColor = System.Drawing.Color.White;
+            this.ui8or9.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.ui8or9.OnHoverTextColor = System.Drawing.Color.White;
+            this.ui8or9.Size = new System.Drawing.Size(75, 43);
+            this.ui8or9.TabIndex = 5;
+            this.ui8or9.Text = "8 ou 9";
+            this.ui8or9.TextColor = System.Drawing.Color.White;
+            this.ui8or9.UseVisualStyleBackColor = false;
             // 
-            // uiButton4
+            // ui6or7
             // 
-            this.uiButton4.BorderColor = System.Drawing.Color.White;
-            this.uiButton4.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton4.FlatAppearance.BorderSize = 0;
-            this.uiButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton4.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton4.Location = new System.Drawing.Point(302, 243);
-            this.uiButton4.Name = "uiButton4";
-            this.uiButton4.OnHoverBorderColor = System.Drawing.Color.White;
-            this.uiButton4.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton4.Size = new System.Drawing.Size(75, 43);
-            this.uiButton4.TabIndex = 4;
-            this.uiButton4.Text = "6 ou 7";
-            this.uiButton4.TextColor = System.Drawing.Color.White;
-            this.uiButton4.UseVisualStyleBackColor = false;
+            this.ui6or7.BorderColor = System.Drawing.Color.White;
+            this.ui6or7.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.ui6or7.FlatAppearance.BorderSize = 0;
+            this.ui6or7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ui6or7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ui6or7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ui6or7.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ui6or7.Location = new System.Drawing.Point(302, 243);
+            this.ui6or7.Name = "ui6or7";
+            this.ui6or7.OnHoverBorderColor = System.Drawing.Color.White;
+            this.ui6or7.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.ui6or7.OnHoverTextColor = System.Drawing.Color.White;
+            this.ui6or7.Size = new System.Drawing.Size(75, 43);
+            this.ui6or7.TabIndex = 4;
+            this.ui6or7.Text = "6 ou 7";
+            this.ui6or7.TextColor = System.Drawing.Color.White;
+            this.ui6or7.UseVisualStyleBackColor = false;
             // 
-            // uiButton3
+            // ui4or5
             // 
-            this.uiButton3.BorderColor = System.Drawing.Color.White;
-            this.uiButton3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton3.FlatAppearance.BorderSize = 0;
-            this.uiButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton3.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton3.Location = new System.Drawing.Point(221, 243);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.OnHoverBorderColor = System.Drawing.Color.White;
-            this.uiButton3.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton3.Size = new System.Drawing.Size(75, 43);
-            this.uiButton3.TabIndex = 3;
-            this.uiButton3.Text = "4 ou 5";
-            this.uiButton3.TextColor = System.Drawing.Color.White;
-            this.uiButton3.UseVisualStyleBackColor = false;
+            this.ui4or5.BorderColor = System.Drawing.Color.White;
+            this.ui4or5.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.ui4or5.FlatAppearance.BorderSize = 0;
+            this.ui4or5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ui4or5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ui4or5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ui4or5.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ui4or5.Location = new System.Drawing.Point(221, 243);
+            this.ui4or5.Name = "ui4or5";
+            this.ui4or5.OnHoverBorderColor = System.Drawing.Color.White;
+            this.ui4or5.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.ui4or5.OnHoverTextColor = System.Drawing.Color.White;
+            this.ui4or5.Size = new System.Drawing.Size(75, 43);
+            this.ui4or5.TabIndex = 3;
+            this.ui4or5.Text = "4 ou 5";
+            this.ui4or5.TextColor = System.Drawing.Color.White;
+            this.ui4or5.UseVisualStyleBackColor = false;
             // 
-            // uiButton2
+            // ui2or3
             // 
-            this.uiButton2.BorderColor = System.Drawing.Color.White;
-            this.uiButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton2.FlatAppearance.BorderSize = 0;
-            this.uiButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton2.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton2.Location = new System.Drawing.Point(140, 243);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.OnHoverBorderColor = System.Drawing.Color.White;
-            this.uiButton2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton2.Size = new System.Drawing.Size(75, 43);
-            this.uiButton2.TabIndex = 2;
-            this.uiButton2.Text = "2 ou 3";
-            this.uiButton2.TextColor = System.Drawing.Color.White;
-            this.uiButton2.UseVisualStyleBackColor = false;
+            this.ui2or3.BorderColor = System.Drawing.Color.White;
+            this.ui2or3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.ui2or3.FlatAppearance.BorderSize = 0;
+            this.ui2or3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ui2or3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ui2or3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ui2or3.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ui2or3.Location = new System.Drawing.Point(140, 243);
+            this.ui2or3.Name = "ui2or3";
+            this.ui2or3.OnHoverBorderColor = System.Drawing.Color.White;
+            this.ui2or3.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.ui2or3.OnHoverTextColor = System.Drawing.Color.White;
+            this.ui2or3.Size = new System.Drawing.Size(75, 43);
+            this.ui2or3.TabIndex = 2;
+            this.ui2or3.Text = "2 ou 3";
+            this.ui2or3.TextColor = System.Drawing.Color.White;
+            this.ui2or3.UseVisualStyleBackColor = false;
             // 
-            // uiButton1
+            // ui0or1
             // 
-            this.uiButton1.BorderColor = System.Drawing.Color.White;
-            this.uiButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton1.FlatAppearance.BorderSize = 0;
-            this.uiButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton1.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton1.Location = new System.Drawing.Point(59, 243);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.uiButton1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton1.Size = new System.Drawing.Size(75, 43);
-            this.uiButton1.TabIndex = 1;
-            this.uiButton1.Text = "0 ou 1";
-            this.uiButton1.TextColor = System.Drawing.Color.White;
-            this.uiButton1.UseVisualStyleBackColor = false;
+            this.ui0or1.BorderColor = System.Drawing.Color.White;
+            this.ui0or1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.ui0or1.FlatAppearance.BorderSize = 0;
+            this.ui0or1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ui0or1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ui0or1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ui0or1.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ui0or1.Location = new System.Drawing.Point(59, 243);
+            this.ui0or1.Name = "ui0or1";
+            this.ui0or1.OnHoverBorderColor = System.Drawing.Color.White;
+            this.ui0or1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.ui0or1.OnHoverTextColor = System.Drawing.Color.White;
+            this.ui0or1.Size = new System.Drawing.Size(75, 43);
+            this.ui0or1.TabIndex = 1;
+            this.ui0or1.Text = "0 ou 1";
+            this.ui0or1.TextColor = System.Drawing.Color.White;
+            this.ui0or1.UseVisualStyleBackColor = false;
             // 
             // uiPanel1
             // 
@@ -329,11 +329,11 @@
         private System.Windows.Forms.Label lblDescControl;
         private System.Windows.Forms.Label lblTextControl;
         private System.Windows.Forms.PictureBox picImageControl;
-        private uiCSB.Component.uiButton uiButton1;
-        private uiCSB.Component.uiButton uiButton5;
-        private uiCSB.Component.uiButton uiButton4;
-        private uiCSB.Component.uiButton uiButton3;
-        private uiCSB.Component.uiButton uiButton2;
+        private uiCSB.Component.uiButton ui0or1;
+        private uiCSB.Component.uiButton ui8or9;
+        private uiCSB.Component.uiButton ui6or7;
+        private uiCSB.Component.uiButton ui4or5;
+        private uiCSB.Component.uiButton ui2or3;
         private uiCSB.Component.uiTextBox uiTextBox1;
         private uiCSB.Component.uiTextBox uiTextBox2;
         private System.Windows.Forms.Label label1;

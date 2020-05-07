@@ -39,6 +39,8 @@ namespace Blockchain.Formularios
             //pnlBackground.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlBackground.Width, pnlBackground.Height, 20, 20));
 
             Util.Util.MudarConteudo(pnlConteudo, uctBase);
+
+
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -59,6 +61,11 @@ namespace Blockchain.Formularios
         private void btnExit_Click(object sender, EventArgs e)
         {
             Util.Util.MudarFormulario(this, new frmAcesso());
+        }
+
+        private void uiMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

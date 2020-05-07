@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
             this.pnlBackground = new System.Windows.Forms.Panel();
+            this.uiMinimize = new uiCSB.Component.uiPicture();
             this.pnlConteudo = new System.Windows.Forms.Panel();
             this.uctBase = new Blockchain.Control.uctBase();
             this.uctBlockchain = new Blockchain.Control.uctBlockchain();
@@ -39,18 +40,24 @@
             this.picProfilePhoto = new System.Windows.Forms.PictureBox();
             this.btnExit = new uiCSB.Component.uiPicture();
             this.btnBlockchain = new uiCSB.Component.uiPicture();
+            this.btnConfig = new uiCSB.Component.uiPicture();
+            this.btnSupport = new uiCSB.Component.uiPicture();
             this.pnlBackground.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiMinimize)).BeginInit();
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBlockchain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBackground
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.White;
+            this.pnlBackground.Controls.Add(this.uiMinimize);
             this.pnlBackground.Controls.Add(this.pnlConteudo);
             this.pnlBackground.Controls.Add(this.iconPicture2);
             this.pnlBackground.Controls.Add(this.iconPictureBox2);
@@ -59,6 +66,28 @@
             this.pnlBackground.Size = new System.Drawing.Size(867, 651);
             this.pnlBackground.TabIndex = 0;
             this.pnlBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // uiMinimize
+            // 
+            this.uiMinimize.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.uiMinimize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.uiMinimize.BackColor = System.Drawing.Color.DodgerBlue;
+            this.uiMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMinimize.ButtonColor = System.Drawing.Color.DodgerBlue;
+            this.uiMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.uiMinimize.IconColor = System.Drawing.Color.White;
+            this.uiMinimize.IconSize = 27;
+            this.uiMinimize.Location = new System.Drawing.Point(825, 12);
+            this.uiMinimize.Name = "uiMinimize";
+            this.uiMinimize.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiMinimize.Rounded = true;
+            this.uiMinimize.Size = new System.Drawing.Size(30, 27);
+            this.uiMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.uiMinimize.TabIndex = 4;
+            this.uiMinimize.TabStop = false;
+            this.uiMinimize.uiSize = 10;
+            this.uiMinimize.UseGdi = true;
+            this.uiMinimize.Click += new System.EventHandler(this.uiMinimize_Click);
             // 
             // pnlConteudo
             // 
@@ -98,7 +127,7 @@
             this.iconPicture2.IconChar = FontAwesome.Sharp.IconChar.Bell;
             this.iconPicture2.IconColor = System.Drawing.Color.White;
             this.iconPicture2.IconSize = 27;
-            this.iconPicture2.Location = new System.Drawing.Point(811, 12);
+            this.iconPicture2.Location = new System.Drawing.Point(789, 12);
             this.iconPicture2.Name = "iconPicture2";
             this.iconPicture2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
             this.iconPicture2.Rounded = true;
@@ -168,7 +197,7 @@
             this.btnBlockchain.IconChar = FontAwesome.Sharp.IconChar.SearchDollar;
             this.btnBlockchain.IconColor = System.Drawing.Color.White;
             this.btnBlockchain.IconSize = 40;
-            this.btnBlockchain.Location = new System.Drawing.Point(1, 187);
+            this.btnBlockchain.Location = new System.Drawing.Point(0, 145);
             this.btnBlockchain.Name = "btnBlockchain";
             this.btnBlockchain.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
             this.btnBlockchain.Rounded = false;
@@ -179,6 +208,40 @@
             this.btnBlockchain.uiSize = 40;
             this.btnBlockchain.Click += new System.EventHandler(this.btnBlockchain_Click);
             // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnConfig.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.btnConfig.IconColor = System.Drawing.Color.White;
+            this.btnConfig.IconSize = 40;
+            this.btnConfig.Location = new System.Drawing.Point(0, 365);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.btnConfig.Rounded = false;
+            this.btnConfig.Size = new System.Drawing.Size(82, 71);
+            this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnConfig.TabIndex = 5;
+            this.btnConfig.TabStop = false;
+            this.btnConfig.uiSize = 40;
+            // 
+            // btnSupport
+            // 
+            this.btnSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnSupport.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnSupport.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnSupport.IconColor = System.Drawing.Color.White;
+            this.btnSupport.IconSize = 40;
+            this.btnSupport.Location = new System.Drawing.Point(0, 222);
+            this.btnSupport.Name = "btnSupport";
+            this.btnSupport.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.btnSupport.Rounded = false;
+            this.btnSupport.Size = new System.Drawing.Size(82, 71);
+            this.btnSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnSupport.TabIndex = 6;
+            this.btnSupport.TabStop = false;
+            this.btnSupport.uiSize = 40;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +249,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
             this.ClientSize = new System.Drawing.Size(950, 650);
+            this.Controls.Add(this.btnSupport);
+            this.Controls.Add(this.btnConfig);
             this.Controls.Add(this.pnlBackground);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.picProfilePhoto);
@@ -196,12 +261,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pnlBackground.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uiMinimize)).EndInit();
             this.pnlConteudo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBlockchain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +288,9 @@
         private uiCSB.Component.uiPicture btnExit;
         private Control.uctBase uctBase;
         public System.Windows.Forms.Panel pnlConteudo;
+        private uiCSB.Component.uiPicture uiMinimize;
+        private uiCSB.Component.uiPicture btnConfig;
+        private uiCSB.Component.uiPicture btnSupport;
     }
 }
 
