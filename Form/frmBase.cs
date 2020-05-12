@@ -1,19 +1,15 @@
-﻿using Blockchain.Control;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using uiCSB.Component;
-using uiCSB.Util;
-using Blockchain.Util;
 
-namespace Blockchain.Formularios
+using System.IO;
+
+using uiCSB.Util;
+using System.Threading;
+using System.Web;
+using System.Net;
+
+namespace Etherchain.Formularios
 {
     public partial class frmBase : Form
     {
@@ -39,8 +35,6 @@ namespace Blockchain.Formularios
             //pnlBackground.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlBackground.Width, pnlBackground.Height, 20, 20));
 
             Util.Util.MudarConteudo(pnlConteudo, uctBase);
-
-
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -48,9 +42,9 @@ namespace Blockchain.Formularios
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
         }
 
-        private void btnBlockchain_Click(object sender, EventArgs e)
+        private void btnClientes_Click(object sender, EventArgs e)
         {
-            Util.Util.MudarConteudo(pnlConteudo, uctBlockchain);
+            Util.Util.MudarConteudo(pnlConteudo, uctClientes);
         }
 
         private void picProfilePhoto_Click(object sender, EventArgs e)
@@ -66,6 +60,11 @@ namespace Blockchain.Formularios
         private void uiMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnSupport_Click(object sender, EventArgs e)
+        {
+            Util.Util.MudarConteudo(pnlConteudo, uctSupport);
         }
     }
 }

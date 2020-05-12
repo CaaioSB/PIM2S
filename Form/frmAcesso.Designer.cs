@@ -1,4 +1,4 @@
-﻿namespace Blockchain.Formularios
+﻿namespace Etherchain.Formularios
 {
     partial class frmAcesso
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.uiLogin = new uiCSB.Component.uiButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.uiLogin = new uiCSB.Component.uiButton();
             this.uiTextBox2 = new uiCSB.Component.uiTextBox();
             this.uiTextBox1 = new uiCSB.Component.uiTextBox();
             this.ui8or9 = new uiCSB.Component.uiButton();
@@ -67,30 +67,6 @@
             this.panel1.Size = new System.Drawing.Size(541, 382);
             this.panel1.TabIndex = 0;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
-            this.label2.Location = new System.Drawing.Point(55, 198);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 19);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Insira sua senha";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
-            this.label1.Location = new System.Drawing.Point(55, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 19);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Digite o seu ID";
-            // 
             // uiLogin
             // 
             this.uiLogin.BorderColor = System.Drawing.Color.White;
@@ -112,26 +88,52 @@
             this.uiLogin.UseVisualStyleBackColor = false;
             this.uiLogin.Click += new System.EventHandler(this.uiLogin_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
+            this.label2.Location = new System.Drawing.Point(55, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 19);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Insira sua senha";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
+            this.label1.Location = new System.Drawing.Point(55, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 19);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Digite o seu ID";
+            // 
             // uiTextBox2
             // 
             this.uiTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.uiTextBox2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiTextBox2.ForeColor = System.Drawing.Color.White;
             this.uiTextBox2.Location = new System.Drawing.Point(59, 177);
             this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Size = new System.Drawing.Size(399, 25);
+            this.uiTextBox2.Size = new System.Drawing.Size(399, 18);
             this.uiTextBox2.TabIndex = 8;
             // 
             // uiTextBox1
             // 
             this.uiTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.uiTextBox1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiTextBox1.ForeColor = System.Drawing.Color.White;
             this.uiTextBox1.Location = new System.Drawing.Point(59, 216);
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.PasswordChar = '*';
             this.uiTextBox1.ReadOnly = true;
-            this.uiTextBox1.Size = new System.Drawing.Size(399, 25);
+            this.uiTextBox1.Size = new System.Drawing.Size(399, 18);
             this.uiTextBox1.TabIndex = 7;
             // 
             // ui8or9
@@ -242,6 +244,8 @@
             this.uiPanel1.Controls.Add(this.picImageControl);
             this.uiPanel1.Location = new System.Drawing.Point(12, 12);
             this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.uiPanel1.PanelRadius = 5;
             this.uiPanel1.Size = new System.Drawing.Size(517, 100);
             this.uiPanel1.TabIndex = 0;
             // 
@@ -294,7 +298,7 @@
             // picImageControl
             // 
             this.picImageControl.BackColor = System.Drawing.Color.Transparent;
-            this.picImageControl.Image = global::Blockchain.Properties.Resources.securityon;
+            this.picImageControl.Image = global::Etherchain.Properties.Resources.securityon;
             this.picImageControl.Location = new System.Drawing.Point(6, 8);
             this.picImageControl.Name = "picImageControl";
             this.picImageControl.Size = new System.Drawing.Size(98, 83);

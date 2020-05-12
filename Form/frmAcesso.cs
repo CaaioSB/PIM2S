@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using uiCSB.Util;
 using uiCSB.Component;
 
-namespace Blockchain.Formularios
+namespace Etherchain.Formularios
 {
     public partial class frmAcesso : Form
     {

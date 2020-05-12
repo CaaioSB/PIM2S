@@ -1,4 +1,4 @@
-﻿namespace Blockchain.Formularios
+﻿namespace Etherchain.Formularios
 {
     partial class frmBase
     {
@@ -32,14 +32,15 @@
             this.pnlBackground = new System.Windows.Forms.Panel();
             this.uiMinimize = new uiCSB.Component.uiPicture();
             this.pnlConteudo = new System.Windows.Forms.Panel();
-            this.uctBase = new Blockchain.Control.uctBase();
-            this.uctBlockchain = new Blockchain.Control.uctBlockchain();
+            this.uctClientes = new Etherchain.Control.uctClientes();
+            this.uctSupport = new Etherchain.Control.uctSupport();
+            this.uctBase = new Etherchain.Control.uctBase();
             this.iconPicture2 = new uiCSB.Component.uiPicture();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.picProfilePhoto = new System.Windows.Forms.PictureBox();
             this.btnExit = new uiCSB.Component.uiPicture();
-            this.btnBlockchain = new uiCSB.Component.uiPicture();
+            this.btnClientes = new uiCSB.Component.uiPicture();
             this.btnConfig = new uiCSB.Component.uiPicture();
             this.btnSupport = new uiCSB.Component.uiPicture();
             this.pnlBackground.SuspendLayout();
@@ -49,7 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBlockchain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).BeginInit();
             this.SuspendLayout();
@@ -91,12 +92,29 @@
             // 
             // pnlConteudo
             // 
+            this.pnlConteudo.Controls.Add(this.uctClientes);
+            this.pnlConteudo.Controls.Add(this.uctSupport);
             this.pnlConteudo.Controls.Add(this.uctBase);
-            this.pnlConteudo.Controls.Add(this.uctBlockchain);
             this.pnlConteudo.Location = new System.Drawing.Point(16, 61);
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(839, 578);
             this.pnlConteudo.TabIndex = 6;
+            // 
+            // uctClientes
+            // 
+            this.uctClientes.BackColor = System.Drawing.Color.White;
+            this.uctClientes.Location = new System.Drawing.Point(47, 58);
+            this.uctClientes.Name = "uctClientes";
+            this.uctClientes.Size = new System.Drawing.Size(834, 568);
+            this.uctClientes.TabIndex = 8;
+            // 
+            // uctSupport
+            // 
+            this.uctSupport.BackColor = System.Drawing.Color.White;
+            this.uctSupport.Location = new System.Drawing.Point(14, 34);
+            this.uctSupport.Name = "uctSupport";
+            this.uctSupport.Size = new System.Drawing.Size(834, 568);
+            this.uctSupport.TabIndex = 7;
             // 
             // uctBase
             // 
@@ -107,15 +125,6 @@
             this.uctBase.Name = "uctBase";
             this.uctBase.Size = new System.Drawing.Size(834, 568);
             this.uctBase.TabIndex = 6;
-            // 
-            // uctBlockchain
-            // 
-            this.uctBlockchain.BackColor = System.Drawing.Color.White;
-            this.uctBlockchain.Location = new System.Drawing.Point(3, 3);
-            this.uctBlockchain.Name = "uctBlockchain";
-            this.uctBlockchain.Size = new System.Drawing.Size(834, 568);
-            this.uctBlockchain.TabIndex = 5;
-            this.uctBlockchain.Visible = false;
             // 
             // iconPicture2
             // 
@@ -163,7 +172,7 @@
             // 
             // picProfilePhoto
             // 
-            this.picProfilePhoto.Image = global::Blockchain.Properties.Resources.male;
+            this.picProfilePhoto.Image = global::Etherchain.Properties.Resources.male;
             this.picProfilePhoto.Location = new System.Drawing.Point(11, 12);
             this.picProfilePhoto.Name = "picProfilePhoto";
             this.picProfilePhoto.Size = new System.Drawing.Size(60, 60);
@@ -190,23 +199,23 @@
             this.btnExit.uiSize = 40;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnBlockchain
+            // btnClientes
             // 
-            this.btnBlockchain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.btnBlockchain.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.btnBlockchain.IconChar = FontAwesome.Sharp.IconChar.SearchDollar;
-            this.btnBlockchain.IconColor = System.Drawing.Color.White;
-            this.btnBlockchain.IconSize = 40;
-            this.btnBlockchain.Location = new System.Drawing.Point(0, 145);
-            this.btnBlockchain.Name = "btnBlockchain";
-            this.btnBlockchain.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.btnBlockchain.Rounded = false;
-            this.btnBlockchain.Size = new System.Drawing.Size(82, 71);
-            this.btnBlockchain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnBlockchain.TabIndex = 2;
-            this.btnBlockchain.TabStop = false;
-            this.btnBlockchain.uiSize = 40;
-            this.btnBlockchain.Click += new System.EventHandler(this.btnBlockchain_Click);
+            this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnClientes.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnClientes.IconColor = System.Drawing.Color.White;
+            this.btnClientes.IconSize = 40;
+            this.btnClientes.Location = new System.Drawing.Point(0, 145);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.btnClientes.Rounded = false;
+            this.btnClientes.Size = new System.Drawing.Size(82, 71);
+            this.btnClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClientes.TabIndex = 2;
+            this.btnClientes.TabStop = false;
+            this.btnClientes.uiSize = 40;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnConfig
             // 
@@ -215,7 +224,7 @@
             this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Cogs;
             this.btnConfig.IconColor = System.Drawing.Color.White;
             this.btnConfig.IconSize = 40;
-            this.btnConfig.Location = new System.Drawing.Point(0, 365);
+            this.btnConfig.Location = new System.Drawing.Point(0, 299);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
             this.btnConfig.Rounded = false;
@@ -241,6 +250,7 @@
             this.btnSupport.TabIndex = 6;
             this.btnSupport.TabStop = false;
             this.btnSupport.uiSize = 40;
+            this.btnSupport.Click += new System.EventHandler(this.btnSupport_Click);
             // 
             // frmBase
             // 
@@ -254,7 +264,7 @@
             this.Controls.Add(this.pnlBackground);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.picProfilePhoto);
-            this.Controls.Add(this.btnBlockchain);
+            this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBase";
@@ -267,7 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBlockchain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).EndInit();
             this.ResumeLayout(false);
@@ -282,15 +292,16 @@
         private System.Windows.Forms.PictureBox picProfilePhoto;
 
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private uiCSB.Component.uiPicture btnBlockchain;
+        private uiCSB.Component.uiPicture btnClientes;
         private uiCSB.Component.uiPicture iconPicture2;
-        private Control.uctBlockchain uctBlockchain;
         private uiCSB.Component.uiPicture btnExit;
         private Control.uctBase uctBase;
         public System.Windows.Forms.Panel pnlConteudo;
         private uiCSB.Component.uiPicture uiMinimize;
         private uiCSB.Component.uiPicture btnConfig;
         private uiCSB.Component.uiPicture btnSupport;
+        private Control.uctSupport uctSupport;
+        private Control.uctClientes uctClientes;
     }
 }
 
