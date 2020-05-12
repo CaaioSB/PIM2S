@@ -5,6 +5,8 @@ namespace uiCSB.Component
 {
     public class uiFlowPanel : FlowLayoutPanel
     {
+        private Color _flowPanelColor = Color.FromArgb(230, 235, 255);
+
         public uiFlowPanel()
         {
             DoubleBuffered = true;
@@ -16,7 +18,7 @@ namespace uiCSB.Component
             Graphics g = e.Graphics;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            Brush brush = new SolidBrush(Color.FromArgb(230, 235, 255));
+            Brush brush = new SolidBrush(_flowPanelColor);
 
             RectangleF myRectangleF = new RectangleF(0F, 0F, Width - 3, Height - 3);
 
@@ -27,6 +29,16 @@ namespace uiCSB.Component
             RoundedRectangle.FillRoundedRectangle(e.Graphics, brush, roundedRectangle, 5);
 
             brush.Dispose();
+        }
+
+        public Color FlowPanelColor
+        {
+            get => _flowPanelColor;
+            set
+            {
+                _flowPanelColor = value;
+                Invalidate();
+            }
         }
     }
 }

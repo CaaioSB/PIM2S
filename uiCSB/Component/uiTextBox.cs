@@ -9,7 +9,7 @@ namespace uiCSB.Component
     {
         public uiTextBox()
         {
-
+            BorderStyle = BorderStyle.None;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -21,7 +21,7 @@ namespace uiCSB.Component
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            Region = Region.FromHrgn(CreateRoundRectRgn(2, 3, Width, Height -3, 5, 5));
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 5, 5));
             Invalidate();
         }
 
