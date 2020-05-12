@@ -1,4 +1,4 @@
-﻿namespace Blockchain.Control
+﻿namespace Etherchain.Control
 {
     partial class uctLogin
     {

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Blockchain.Control
+namespace Etherchain.Control
 {
-    public partial class uctBlockchain : UserControl
+    public partial class uctSupport : UserControl
     {
-        public uctBlockchain()
+        public uctSupport()
         {
             InitializeComponent();
         }
