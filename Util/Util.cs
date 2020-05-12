@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Blockchain.Util
+namespace Etherchain.Util
 {
     public static class Util
     {
