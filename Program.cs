@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Blockchain.Formularios
+namespace Etherchain.Formularios
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Blockchain.Formularios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAcesso());
+            Application.Run(new frmBase());
         }
     }
 }
