@@ -32,27 +32,28 @@
             this.pnlBackground = new System.Windows.Forms.Panel();
             this.uiMinimize = new uiCSB.Component.uiPicture();
             this.pnlConteudo = new System.Windows.Forms.Panel();
-            this.uctClientes = new Etherchain.Control.uctClientes();
-            this.uctSupport = new Etherchain.Control.uctSupport();
-            this.uctBase = new Etherchain.Control.uctBase();
             this.iconPicture2 = new uiCSB.Component.uiPicture();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.picProfilePhoto = new System.Windows.Forms.PictureBox();
+            this.btnSupport = new uiCSB.Component.uiPicture();
+            this.btnConfig = new uiCSB.Component.uiPicture();
             this.btnExit = new uiCSB.Component.uiPicture();
             this.btnClientes = new uiCSB.Component.uiPicture();
-            this.btnConfig = new uiCSB.Component.uiPicture();
-            this.btnSupport = new uiCSB.Component.uiPicture();
+            this.uctClientes = new Etherchain.Control.uctClientes();
+            this.uctSupport = new Etherchain.Control.uctSupport();
+            this.uctBase = new Etherchain.Control.uctBase();
+            this.uctSettings = new Etherchain.Control.uctSettings();
             this.pnlBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiMinimize)).BeginInit();
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBackground
@@ -92,6 +93,7 @@
             // 
             // pnlConteudo
             // 
+            this.pnlConteudo.Controls.Add(this.uctSettings);
             this.pnlConteudo.Controls.Add(this.uctClientes);
             this.pnlConteudo.Controls.Add(this.uctSupport);
             this.pnlConteudo.Controls.Add(this.uctBase);
@@ -99,32 +101,6 @@
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(839, 578);
             this.pnlConteudo.TabIndex = 6;
-            // 
-            // uctClientes
-            // 
-            this.uctClientes.BackColor = System.Drawing.Color.White;
-            this.uctClientes.Location = new System.Drawing.Point(47, 58);
-            this.uctClientes.Name = "uctClientes";
-            this.uctClientes.Size = new System.Drawing.Size(834, 568);
-            this.uctClientes.TabIndex = 8;
-            // 
-            // uctSupport
-            // 
-            this.uctSupport.BackColor = System.Drawing.Color.White;
-            this.uctSupport.Location = new System.Drawing.Point(14, 34);
-            this.uctSupport.Name = "uctSupport";
-            this.uctSupport.Size = new System.Drawing.Size(834, 568);
-            this.uctSupport.TabIndex = 7;
-            // 
-            // uctBase
-            // 
-            this.uctBase.BackColor = System.Drawing.Color.White;
-            this.uctBase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uctBase.BackgroundImage")));
-            this.uctBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.uctBase.Location = new System.Drawing.Point(5, 23);
-            this.uctBase.Name = "uctBase";
-            this.uctBase.Size = new System.Drawing.Size(834, 568);
-            this.uctBase.TabIndex = 6;
             // 
             // iconPicture2
             // 
@@ -181,6 +157,42 @@
             this.picProfilePhoto.TabStop = false;
             this.picProfilePhoto.Click += new System.EventHandler(this.picProfilePhoto_Click);
             // 
+            // btnSupport
+            // 
+            this.btnSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnSupport.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnSupport.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnSupport.IconColor = System.Drawing.Color.White;
+            this.btnSupport.IconSize = 40;
+            this.btnSupport.Location = new System.Drawing.Point(0, 222);
+            this.btnSupport.Name = "btnSupport";
+            this.btnSupport.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.btnSupport.Rounded = false;
+            this.btnSupport.Size = new System.Drawing.Size(82, 71);
+            this.btnSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnSupport.TabIndex = 6;
+            this.btnSupport.TabStop = false;
+            this.btnSupport.uiSize = 40;
+            this.btnSupport.Click += new System.EventHandler(this.btnSupport_Click);
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnConfig.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.btnConfig.IconColor = System.Drawing.Color.White;
+            this.btnConfig.IconSize = 40;
+            this.btnConfig.Location = new System.Drawing.Point(0, 299);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.btnConfig.Rounded = false;
+            this.btnConfig.Size = new System.Drawing.Size(82, 71);
+            this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnConfig.TabIndex = 5;
+            this.btnConfig.TabStop = false;
+            this.btnConfig.uiSize = 40;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
@@ -217,40 +229,39 @@
             this.btnClientes.uiSize = 40;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // btnConfig
+            // uctClientes
             // 
-            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.btnConfig.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.btnConfig.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.btnConfig.IconColor = System.Drawing.Color.White;
-            this.btnConfig.IconSize = 40;
-            this.btnConfig.Location = new System.Drawing.Point(0, 299);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.btnConfig.Rounded = false;
-            this.btnConfig.Size = new System.Drawing.Size(82, 71);
-            this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnConfig.TabIndex = 5;
-            this.btnConfig.TabStop = false;
-            this.btnConfig.uiSize = 40;
+            this.uctClientes.BackColor = System.Drawing.Color.White;
+            this.uctClientes.Location = new System.Drawing.Point(47, 58);
+            this.uctClientes.Name = "uctClientes";
+            this.uctClientes.Size = new System.Drawing.Size(834, 568);
+            this.uctClientes.TabIndex = 8;
             // 
-            // btnSupport
+            // uctSupport
             // 
-            this.btnSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.btnSupport.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.btnSupport.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnSupport.IconColor = System.Drawing.Color.White;
-            this.btnSupport.IconSize = 40;
-            this.btnSupport.Location = new System.Drawing.Point(0, 222);
-            this.btnSupport.Name = "btnSupport";
-            this.btnSupport.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.btnSupport.Rounded = false;
-            this.btnSupport.Size = new System.Drawing.Size(82, 71);
-            this.btnSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnSupport.TabIndex = 6;
-            this.btnSupport.TabStop = false;
-            this.btnSupport.uiSize = 40;
-            this.btnSupport.Click += new System.EventHandler(this.btnSupport_Click);
+            this.uctSupport.BackColor = System.Drawing.Color.White;
+            this.uctSupport.Location = new System.Drawing.Point(14, 34);
+            this.uctSupport.Name = "uctSupport";
+            this.uctSupport.Size = new System.Drawing.Size(834, 568);
+            this.uctSupport.TabIndex = 7;
+            // 
+            // uctBase
+            // 
+            this.uctBase.BackColor = System.Drawing.Color.White;
+            this.uctBase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uctBase.BackgroundImage")));
+            this.uctBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uctBase.Location = new System.Drawing.Point(5, 23);
+            this.uctBase.Name = "uctBase";
+            this.uctBase.Size = new System.Drawing.Size(834, 568);
+            this.uctBase.TabIndex = 6;
+            // 
+            // uctSettings
+            // 
+            this.uctSettings.BackColor = System.Drawing.Color.White;
+            this.uctSettings.Location = new System.Drawing.Point(88, 117);
+            this.uctSettings.Name = "uctSettings";
+            this.uctSettings.Size = new System.Drawing.Size(834, 568);
+            this.uctSettings.TabIndex = 9;
             // 
             // frmBase
             // 
@@ -276,10 +287,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfilePhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSupport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +313,7 @@
         private uiCSB.Component.uiPicture btnSupport;
         private Control.uctSupport uctSupport;
         private Control.uctClientes uctClientes;
+        private Control.uctSettings uctSettings;
     }
 }
 
