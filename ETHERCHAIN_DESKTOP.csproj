@@ -112,6 +112,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\Settings\uctAcessibilidade.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Settings\uctAcessibilidade.Designer.cs">
+      <DependentUpon>uctAcessibilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Settings\uctChangeKey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Settings\uctChangeKey.Designer.cs">
+      <DependentUpon>uctChangeKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\uctBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +135,12 @@
     </Compile>
     <Compile Include="Control\uctClientes.Designer.cs">
       <DependentUpon>uctClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Settings\uctSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Settings\uctSettings.Designer.cs">
+      <DependentUpon>uctSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\uctLogin.cs">
       <SubType>UserControl</SubType>
@@ -152,11 +170,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Random.cs" />
     <Compile Include="Util\Util.cs" />
+    <EmbeddedResource Include="Control\Settings\uctAcessibilidade.resx">
+      <DependentUpon>uctAcessibilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Settings\uctChangeKey.resx">
+      <DependentUpon>uctChangeKey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\uctBase.resx">
       <DependentUpon>uctBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\uctClientes.resx">
       <DependentUpon>uctClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Settings\uctSettings.resx">
+      <DependentUpon>uctSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\uctLogin.resx">
       <DependentUpon>uctLogin.cs</DependentUpon>
