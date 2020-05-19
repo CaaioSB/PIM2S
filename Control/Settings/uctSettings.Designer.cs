@@ -56,8 +56,8 @@
             // 
             // uiBtnAcessibilidade
             // 
-            this.uiBtnAcessibilidade.BackColor = System.Drawing.Color.Transparent;
-            this.uiBtnAcessibilidade.BorderColor = System.Drawing.Color.Transparent;
+            this.uiBtnAcessibilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnAcessibilidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.uiBtnAcessibilidade.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
             this.uiBtnAcessibilidade.FlatAppearance.BorderSize = 0;
             this.uiBtnAcessibilidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -65,7 +65,7 @@
             this.uiBtnAcessibilidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiBtnAcessibilidade.Location = new System.Drawing.Point(3, 3);
             this.uiBtnAcessibilidade.Name = "uiBtnAcessibilidade";
-            this.uiBtnAcessibilidade.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.uiBtnAcessibilidade.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
             this.uiBtnAcessibilidade.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
             this.uiBtnAcessibilidade.OnHoverTextColor = System.Drawing.Color.White;
             this.uiBtnAcessibilidade.Size = new System.Drawing.Size(147, 84);
@@ -135,10 +135,10 @@
             // picImageControl
             // 
             this.picImageControl.BackColor = System.Drawing.Color.Transparent;
-            this.picImageControl.Image = global::Etherchain.Properties.Resources.support;
-            this.picImageControl.Location = new System.Drawing.Point(15, 11);
+            this.picImageControl.Image = global::Etherchain.Properties.Resources.preferences;
+            this.picImageControl.Location = new System.Drawing.Point(15, 18);
             this.picImageControl.Name = "picImageControl";
-            this.picImageControl.Size = new System.Drawing.Size(119, 103);
+            this.picImageControl.Size = new System.Drawing.Size(119, 93);
             this.picImageControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImageControl.TabIndex = 4;
             this.picImageControl.TabStop = false;
@@ -161,6 +161,7 @@
             this.uctChangeKey.Name = "uctChangeKey";
             this.uctChangeKey.Size = new System.Drawing.Size(822, 320);
             this.uctChangeKey.TabIndex = 11;
+            this.uctChangeKey.Visible = false;
             // 
             // uctAcessibilidade
             // 
