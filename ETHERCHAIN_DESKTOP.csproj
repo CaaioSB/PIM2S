@@ -250,6 +250,10 @@
     <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ETHERCHAIN_COMMON\ETHERCHAIN_COMMON.csproj">
+      <Project>{b4af4bad-0f10-4f56-85be-6f19a0d9abb0}</Project>
+      <Name>ETHERCHAIN_COMMON</Name>
+    </ProjectReference>
     <ProjectReference Include="uiCSB\uiCSB.csproj">
       <Project>{3aa38f95-836e-456b-ac6d-856f88516056}</Project>
       <Name>uiCSB</Name>
