@@ -112,6 +112,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\Executive\uctExecutive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Executive\uctExecutive.Designer.cs">
+      <DependentUpon>uctExecutive.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\Settings\uctAcessibilidade.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Random.cs" />
     <Compile Include="Util\Util.cs" />
+    <EmbeddedResource Include="Control\Executive\uctExecutive.resx">
+      <DependentUpon>uctExecutive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Settings\uctAcessibilidade.resx">
       <DependentUpon>uctAcessibilidade.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,12 +240,13 @@
     <None Include="Resources\spreadshet.png" />
     <None Include="Resources\securityon.png" />
     <None Include="Resources\authentication.png" />
-    <None Include="Resources\teste.png" />
-    <None Include="Resources\teste1.png" />
-    <None Include="Resources\teste2.png" />
-    <None Include="Resources\teste3.png" />
-    <None Include="Resources\teste4.png" />
     <None Include="Resources\support.png" />
+    <None Include="Resources\preferences.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\support2.png" />
+    <None Include="Resources\timeline.png" />
+    <None Include="Resources\queue.png" />
     <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <ItemGroup>

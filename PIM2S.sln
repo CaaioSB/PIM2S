@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uiCSB", "uiCSB\uiCSB.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETHERCHAIN_COMMON", "..\ETHERCHAIN_COMMON\ETHERCHAIN_COMMON.csproj", "{B4AF4BAD-0F10-4F56-85BE-6F19A0D9ABB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETHERCHAIN_INSTALLER", "..\ETHERCHAIN_INSTALLER\ETHERCHAIN_INSTALLER.csproj", "{9ED78FC9-B778-4942-A250-AABCD628FF84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B4AF4BAD-0F10-4F56-85BE-6F19A0D9ABB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4AF4BAD-0F10-4F56-85BE-6F19A0D9ABB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4AF4BAD-0F10-4F56-85BE-6F19A0D9ABB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED78FC9-B778-4942-A250-AABCD628FF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED78FC9-B778-4942-A250-AABCD628FF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED78FC9-B778-4942-A250-AABCD628FF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED78FC9-B778-4942-A250-AABCD628FF84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
