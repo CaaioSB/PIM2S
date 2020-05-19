@@ -47,7 +47,7 @@ namespace uiCSB.Component
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             Brush brush = new SolidBrush(_panelColor);
 
-            RectangleF myRectangleF = new RectangleF(0F, 0F, Width - 3, Height - 3);
+            RectangleF myRectangleF = new RectangleF(0F, 0F, Width -1 , Height-1);
 
             Rectangle roundedRectangle = Rectangle.Round(myRectangleF);
 
