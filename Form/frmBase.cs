@@ -71,5 +71,10 @@ namespace Etherchain.Formularios
         {
             Util.Util.MudarConteudo(pnlConteudo, uctSettings);
         }
+
+        private void btnExecutive_Click(object sender, EventArgs e)
+        {
+            Util.Util.MudarConteudo(pnlConteudo, uctExecutive);
+        }
     }
 }
