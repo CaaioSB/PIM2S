@@ -209,7 +209,7 @@
             // 
             // picProfilePhoto
             // 
-            this.picProfilePhoto.Image = global::Etherchain.Properties.Resources.male;
+            this.picProfilePhoto.Image = global::Etherchain.Desktop.Properties.Resources.male;
             this.picProfilePhoto.Location = new System.Drawing.Point(11, 12);
             this.picProfilePhoto.Name = "picProfilePhoto";
             this.picProfilePhoto.Size = new System.Drawing.Size(60, 60);

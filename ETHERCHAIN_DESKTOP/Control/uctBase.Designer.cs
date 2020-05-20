@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Etherchain.Properties.Resources.spreadshet;
+            this.BackgroundImage = global::Etherchain.Desktop.Properties.Resources.spreadshet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Name = "uctBase";
             this.Size = new System.Drawing.Size(834, 568);

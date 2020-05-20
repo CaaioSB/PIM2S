@@ -135,7 +135,7 @@
             // picImageControl
             // 
             this.picImageControl.BackColor = System.Drawing.Color.Transparent;
-            this.picImageControl.Image = global::Etherchain.Properties.Resources.preferences;
+            this.picImageControl.Image = global::Etherchain.Desktop.Properties.Resources.preferences;
             this.picImageControl.Location = new System.Drawing.Point(15, 18);
             this.picImageControl.Name = "picImageControl";
             this.picImageControl.Size = new System.Drawing.Size(119, 93);

@@ -12,11 +12,6 @@ namespace uiCSB.Component
             BorderStyle = BorderStyle.None;
         }
 
-        public static void SetInvalid()
-        {
-            TextBoxBase.BackColor = Color.Red;
-        }
-
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

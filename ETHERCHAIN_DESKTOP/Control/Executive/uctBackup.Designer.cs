@@ -625,7 +625,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Etherchain.Properties.Resources.queue;
+            this.pictureBox3.Image = global::Etherchain.Desktop.Properties.Resources.queue;
             this.pictureBox3.Location = new System.Drawing.Point(15, 18);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(102, 75);
@@ -636,7 +636,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Etherchain.Properties.Resources.timeline;
+            this.pictureBox2.Image = global::Etherchain.Desktop.Properties.Resources.timeline;
             this.pictureBox2.Location = new System.Drawing.Point(6, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(98, 75);
@@ -647,7 +647,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Etherchain.Properties.Resources.time;
+            this.pictureBox1.Image = global::Etherchain.Desktop.Properties.Resources.time;
             this.pictureBox1.Location = new System.Drawing.Point(15, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(102, 75);
@@ -658,7 +658,7 @@
             // picImageControl
             // 
             this.picImageControl.BackColor = System.Drawing.Color.Transparent;
-            this.picImageControl.Image = global::Etherchain.Properties.Resources.backup;
+            this.picImageControl.Image = global::Etherchain.Desktop.Properties.Resources.backup;
             this.picImageControl.Location = new System.Drawing.Point(15, 16);
             this.picImageControl.Name = "picImageControl";
             this.picImageControl.Size = new System.Drawing.Size(113, 97);

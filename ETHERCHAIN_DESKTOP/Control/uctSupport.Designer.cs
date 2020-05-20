@@ -96,7 +96,7 @@
             // picImageControl
             // 
             this.picImageControl.BackColor = System.Drawing.Color.Transparent;
-            this.picImageControl.Image = global::Etherchain.Properties.Resources.support2;
+            this.picImageControl.Image = global::Etherchain.Desktop.Properties.Resources.support2;
             this.picImageControl.Location = new System.Drawing.Point(15, 11);
             this.picImageControl.Name = "picImageControl";
             this.picImageControl.Size = new System.Drawing.Size(119, 103);
@@ -140,7 +140,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Etherchain.Properties.Resources.male;
+            this.pictureBox1.Image = global::Etherchain.Desktop.Properties.Resources.male;
             this.pictureBox1.Location = new System.Drawing.Point(4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 77);
