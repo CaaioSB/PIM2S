@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
-// associadas a um assembly.
-[assembly: AssemblyTitle("ModernFluid")]
+// associada a um assembly.
+[assembly: AssemblyTitle("UTIL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ModernFluid")]
+[assembly: AssemblyProduct("UTIL")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // O GUID a seguir será destinado à ID de typelib se este projeto for exposto para COM
-[assembly: Guid("9938c04a-99e0-4eb8-a56f-0b4d35c6964c")]
+[assembly: Guid("bb367a8c-06b0-4f5a-a8a4-a407310a5ede")]
 
 // As informações da versão de um assembly consistem nos quatro valores a seguir:
 //
