@@ -33,7 +33,7 @@
 <!-- TABLE OF CONTENTS -->
 ## Sumário
 
-* [Sobre o Projeto](#about-the-project)
+* [Sobre o Projeto](#sobre-o-projeto)
   * [Criado com](#built-with)
 
 
