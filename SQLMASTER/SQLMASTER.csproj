@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4AF4BAD-0F10-4F56-85BE-6F19A0D9ABB0}</ProjectGuid>
+    <ProjectGuid>{888AC877-43D7-4A2F-A1EF-255C3E215CD0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Etherchain.Common</RootNamespace>
-    <AssemblyName>Etherchain_Common</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>caiosb.SqlMaster</RootNamespace>
+    <AssemblyName>Common_SqlMaster</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -41,35 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Access.cs" />
-    <Compile Include="App.cs" />
-    <Compile Include="AppLocal.cs" />
-    <Compile Include="Archive.cs" />
-    <Compile Include="CryptoCurency.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Founds.cs" />
-    <Compile Include="CustomerJuridico.cs" />
-    <Compile Include="CustomerFisico.cs" />
-    <Compile Include="Employee.cs" />
+    <Compile Include="Command\sqlCommand.cs" />
+    <Compile Include="Element\sqlElementOrder.cs" />
+    <Compile Include="Helper\sqlHelperOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QRCode.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="TransactionIn.cs" />
-    <Compile Include="TransactionOut.cs" />
-    <Compile Include="Wallet.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Diagrama de Classes.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SQLMASTER\SQLMASTER.csproj">
-      <Project>{888ac877-43d7-4a2f-a1ef-255c3e215cd0}</Project>
-      <Name>SQLMASTER</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UTIL\UTIL.csproj">
-      <Project>{bb367a8c-06b0-4f5a-a8a4-a407310a5ede}</Project>
-      <Name>UTIL</Name>
-    </ProjectReference>
+    <Compile Include="Command\sqlInsert.cs" />
+    <Compile Include="Command\sqlDelete.cs" />
+    <Compile Include="sqlCredential.cs" />
+    <Compile Include="sqlDatabase.cs" />
+    <Compile Include="Helper\sqlHelperJoin.cs" />
+    <Compile Include="Helper\sqlHelperSelect.cs" />
+    <Compile Include="Element\sqlElementTable.cs" />
+    <Compile Include="Element\sqlElementJoin.cs" />
+    <Compile Include="Command\sqlSelect.cs" />
+    <Compile Include="Helper\sqlHelperValue.cs" />
+    <Compile Include="Command\sqlUpdate.cs" />
+    <Compile Include="Element\Where\sqlElementWhereBetween.cs" />
+    <Compile Include="Element\Where\sqlElementWhere.cs" />
+    <Compile Include="Element\Where\sqlElementWhereIn.cs" />
+    <Compile Include="sqlUtil.cs" />
+    <Compile Include="Element\Where\sqlElementWhereCommon.cs" />
+    <Compile Include="Helper\sqlHelperWhere.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/ETHERCHAIN_COMMON/App.cs
+/ETHERCHAIN_COMMON/AppLocal.cs

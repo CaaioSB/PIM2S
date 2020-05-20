@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4AF4BAD-0F10-4F56-85BE-6F19A0D9ABB0}</ProjectGuid>
+    <ProjectGuid>{BB367A8C-06B0-4F5A-A8A4-A407310A5EDE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Etherchain.Common</RootNamespace>
-    <AssemblyName>Etherchain_Common</AssemblyName>
+    <RootNamespace>caiosb.Util</RootNamespace>
+    <AssemblyName>caiosb.Util</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,8 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Caelum.Stella.CSharp, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Caelum.Stella.CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,35 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Access.cs" />
-    <Compile Include="App.cs" />
-    <Compile Include="AppLocal.cs" />
-    <Compile Include="Archive.cs" />
-    <Compile Include="CryptoCurency.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Founds.cs" />
-    <Compile Include="CustomerJuridico.cs" />
-    <Compile Include="CustomerFisico.cs" />
-    <Compile Include="Employee.cs" />
+    <Compile Include="Data\UtilCache.cs" />
+    <Compile Include="Data\UtilConvert.cs" />
+    <Compile Include="Data\UtilFormatar.cs" />
+    <Compile Include="Data\UtilMask.cs" />
+    <Compile Include="Data\UtilValidar.cs" />
+    <Compile Include="EmailClient.cs" />
+    <Compile Include="Hash\Hash.cs" />
+    <Compile Include="Hash\HashMD5.cs" />
+    <Compile Include="Hash\HashNone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QRCode.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="TransactionIn.cs" />
-    <Compile Include="TransactionOut.cs" />
-    <Compile Include="Wallet.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Diagrama de Classes.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SQLMASTER\SQLMASTER.csproj">
-      <Project>{888ac877-43d7-4a2f-a1ef-255c3e215cd0}</Project>
-      <Name>SQLMASTER</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UTIL\UTIL.csproj">
-      <Project>{bb367a8c-06b0-4f5a-a8a4-a407310a5ede}</Project>
-      <Name>UTIL</Name>
-    </ProjectReference>
+    <Compile Include="UtilCallback.cs" />
+    <Compile Include="UtilChangeForm.cs" />
+    <Compile Include="UtilChangePanel.cs" />
+    <Compile Include="UtilRandom.cs" />
+    <Compile Include="UtilTemplate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

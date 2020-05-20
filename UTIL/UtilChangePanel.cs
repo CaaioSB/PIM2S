@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Etherchain.Util
+namespace caiosb.Util
 {
-    public static class Util
+    public class UtilChangePanel
     {
         public static void MudarConteudo(Panel pnlConteudo, UserControl userControl)
         {
@@ -21,13 +21,5 @@ namespace Etherchain.Util
             userControl.Visible = true;
         }
 
-        public static void MudarFormulario(Form oldForm, Form newForm)
-        {
-            var a = oldForm;
-            a.Hide();
-            var form = newForm;
-            form.Closed += (s, args) => form.Close();
-            form.Show();
-        }
     }
 }
