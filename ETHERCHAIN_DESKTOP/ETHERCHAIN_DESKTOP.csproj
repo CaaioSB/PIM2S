@@ -126,6 +126,12 @@
     <Compile Include="Control\Executive\uctExecutive.Designer.cs">
       <DependentUpon>uctExecutive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\Executive\uctFuncionario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Executive\uctFuncionario.Designer.cs">
+      <DependentUpon>uctFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\Settings\uctAcessibilidade.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Executive\uctExecutive.resx">
       <DependentUpon>uctExecutive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Executive\uctFuncionario.resx">
+      <DependentUpon>uctFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Settings\uctAcessibilidade.resx">
       <DependentUpon>uctAcessibilidade.cs</DependentUpon>
@@ -276,6 +285,9 @@
       <Project>{bb367a8c-06b0-4f5a-a8a4-a407310a5ede}</Project>
       <Name>UTIL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\Executive\Funcionario\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
