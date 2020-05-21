@@ -13,6 +13,8 @@ using uiCSB.Component;
 using Etherchain.Common;
 using Etherchain.Desktop;
 using caiosb.Util.Hash;
+using uiCSB.Toastr;
+using Type = uiCSB.Toastr.Type;
 
 namespace Etherchain.Formularios
 {
@@ -37,28 +39,41 @@ namespace Etherchain.Formularios
 
         private void uiLogin_Click(object sender, EventArgs e)
         {
-            Access access = new Access
+            try
             {
-                Cpf = uiTxtCPF.Text,
-                Hash = Hash.HASH.cyph(uiTxtHash.Text),
-                Active = true
-            };
-
-            int? idEmployee = access.AutenticarPorCPF();
-
-            if (idEmployee != null)
-            {
-                Employee employee = new Employee
+                Access access = new Access
                 {
-                    EmployeeId = (int)idEmployee
-                }.ObterPorId();
+                    Cpf = uiTxtCPF.Text,
+                    Hash = Hash.HASH.cyph(uiTxtHash.Text),
+                    Active = true
+                };
 
-                AppDesktop.ActualEmployee = employee;
+                int? idEmployee = access.AutenticarPorCPF();
 
-                this.Hide();
-                var form = new frmBase();
-                form.Closed += (s, args) => this.Close();
-                form.Show();
+                if (idEmployee != null)
+                {
+                    Employee employee = new Employee
+                    {
+                        EmployeeId = (int)idEmployee
+                    }.ObterPorId();
+
+                    AppDesktop.ActualEmployee = employee;
+
+                    this.Hide();
+                    var form = new frmBase();
+                    form.Closed += (s, args) => this.Close();
+                    form.Show();
+
+                    new Alert("Login realizado com sucesso.", Type.Info);
+                }
+                else
+                {
+                    new Alert("CPF e/ou Senha incorretos.", Type.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                new Alert(ex.Message, Type.Warning);
             }
         }
     }
