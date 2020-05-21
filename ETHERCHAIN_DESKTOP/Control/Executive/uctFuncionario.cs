@@ -13,6 +13,8 @@ using System.Runtime.InteropServices;
 using caiosb.Util.Data;
 using System.Drawing.Text;
 using System.Windows.Markup;
+using uiCSB.Toastr;
+using Type = uiCSB.Toastr.Type;
 
 namespace Etherchain.Desktop.Control.Executive
 {
@@ -188,6 +190,8 @@ namespace Etherchain.Desktop.Control.Executive
                     PostCode = uiTxtCep.Text,
                     MobileNumber = uiTxtTelCel.Text
                 }.AlterarPorId();
+
+                new Alert("Funcionário alterado com sucesso!", Type.Success);
             }
             catch (NullReferenceException)
             {
