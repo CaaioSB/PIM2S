@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using caiosb.Util.Data;
+using caiosb.Util;
+using Etherchain.Desktop.Control.Executive;
 
 namespace Etherchain.Control.Executive
 {
@@ -15,6 +18,11 @@ namespace Etherchain.Control.Executive
         public uctExecutive()
         {
             InitializeComponent();
+        }
+
+        private void uiBtnFuncionario_Click(object sender, EventArgs e)
+        {
+            UtilChangePanel.MudarConteudo(uiPanelConteudo, new uctFuncionario());
         }
     }
 }

@@ -33,11 +33,12 @@
             this.lblTextControl = new System.Windows.Forms.Label();
             this.picImageControl = new System.Windows.Forms.PictureBox();
             this.uiFlowPanel1 = new uiCSB.Component.uiFlowPanel();
-            this.uiBtnAcessibilidade = new uiCSB.Component.uiButton();
-            this.uiButton1 = new uiCSB.Component.uiButton();
-            this.uiButton2 = new uiCSB.Component.uiButton();
-            this.uiButton3 = new uiCSB.Component.uiButton();
+            this.uiBtnFuncionario = new uiCSB.Component.uiButton();
             this.uiButton4 = new uiCSB.Component.uiButton();
+            this.uiButton1 = new uiCSB.Component.uiButton();
+            this.uiButton3 = new uiCSB.Component.uiButton();
+            this.uiButton2 = new uiCSB.Component.uiButton();
+            this.uiPanelConteudo = new uiCSB.Component.uiPanel();
             this.uiPanelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImageControl)).BeginInit();
             this.uiFlowPanel1.SuspendLayout();
@@ -92,7 +93,7 @@
             // 
             // uiFlowPanel1
             // 
-            this.uiFlowPanel1.Controls.Add(this.uiBtnAcessibilidade);
+            this.uiFlowPanel1.Controls.Add(this.uiBtnFuncionario);
             this.uiFlowPanel1.Controls.Add(this.uiButton4);
             this.uiFlowPanel1.Controls.Add(this.uiButton1);
             this.uiFlowPanel1.Controls.Add(this.uiButton3);
@@ -103,85 +104,26 @@
             this.uiFlowPanel1.Size = new System.Drawing.Size(834, 90);
             this.uiFlowPanel1.TabIndex = 10;
             // 
-            // uiBtnAcessibilidade
+            // uiBtnFuncionario
             // 
-            this.uiBtnAcessibilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiBtnAcessibilidade.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiBtnAcessibilidade.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiBtnAcessibilidade.FlatAppearance.BorderSize = 0;
-            this.uiBtnAcessibilidade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiBtnAcessibilidade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiBtnAcessibilidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiBtnAcessibilidade.Location = new System.Drawing.Point(3, 3);
-            this.uiBtnAcessibilidade.Name = "uiBtnAcessibilidade";
-            this.uiBtnAcessibilidade.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiBtnAcessibilidade.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiBtnAcessibilidade.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiBtnAcessibilidade.Size = new System.Drawing.Size(160, 84);
-            this.uiBtnAcessibilidade.TabIndex = 8;
-            this.uiBtnAcessibilidade.Text = "FUNCIONÁRIO";
-            this.uiBtnAcessibilidade.TextColor = System.Drawing.Color.White;
-            this.uiBtnAcessibilidade.UseVisualStyleBackColor = false;
-            // 
-            // uiButton1
-            // 
-            this.uiButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton1.FlatAppearance.BorderSize = 0;
-            this.uiButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton1.Location = new System.Drawing.Point(335, 3);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton1.Size = new System.Drawing.Size(161, 84);
-            this.uiButton1.TabIndex = 9;
-            this.uiButton1.Text = "CRIPTOMOEDA";
-            this.uiButton1.TextColor = System.Drawing.Color.White;
-            this.uiButton1.UseVisualStyleBackColor = false;
-            // 
-            // uiButton2
-            // 
-            this.uiButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton2.FlatAppearance.BorderSize = 0;
-            this.uiButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton2.Location = new System.Drawing.Point(669, 3);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton2.Size = new System.Drawing.Size(162, 84);
-            this.uiButton2.TabIndex = 10;
-            this.uiButton2.Text = "RELATÓRIOS";
-            this.uiButton2.TextColor = System.Drawing.Color.White;
-            this.uiButton2.UseVisualStyleBackColor = false;
-            // 
-            // uiButton3
-            // 
-            this.uiButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton3.FlatAppearance.BorderSize = 0;
-            this.uiButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton3.Location = new System.Drawing.Point(502, 3);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton3.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton3.Size = new System.Drawing.Size(161, 84);
-            this.uiButton3.TabIndex = 11;
-            this.uiButton3.Text = "FUNDOS";
-            this.uiButton3.TextColor = System.Drawing.Color.White;
-            this.uiButton3.UseVisualStyleBackColor = false;
+            this.uiBtnFuncionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnFuncionario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnFuncionario.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiBtnFuncionario.FlatAppearance.BorderSize = 0;
+            this.uiBtnFuncionario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.uiBtnFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uiBtnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiBtnFuncionario.Location = new System.Drawing.Point(3, 3);
+            this.uiBtnFuncionario.Name = "uiBtnFuncionario";
+            this.uiBtnFuncionario.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnFuncionario.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiBtnFuncionario.OnHoverTextColor = System.Drawing.Color.White;
+            this.uiBtnFuncionario.Size = new System.Drawing.Size(160, 84);
+            this.uiBtnFuncionario.TabIndex = 8;
+            this.uiBtnFuncionario.Text = "FUNCIONÁRIO";
+            this.uiBtnFuncionario.TextColor = System.Drawing.Color.White;
+            this.uiBtnFuncionario.UseVisualStyleBackColor = false;
+            this.uiBtnFuncionario.Click += new System.EventHandler(this.uiBtnFuncionario_Click);
             // 
             // uiButton4
             // 
@@ -203,11 +145,81 @@
             this.uiButton4.TextColor = System.Drawing.Color.White;
             this.uiButton4.UseVisualStyleBackColor = false;
             // 
+            // uiButton1
+            // 
+            this.uiButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiButton1.FlatAppearance.BorderSize = 0;
+            this.uiButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.uiButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uiButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiButton1.Location = new System.Drawing.Point(335, 3);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.uiButton1.Size = new System.Drawing.Size(161, 84);
+            this.uiButton1.TabIndex = 9;
+            this.uiButton1.Text = "CRIPTOMOEDA";
+            this.uiButton1.TextColor = System.Drawing.Color.White;
+            this.uiButton1.UseVisualStyleBackColor = false;
+            // 
+            // uiButton3
+            // 
+            this.uiButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiButton3.FlatAppearance.BorderSize = 0;
+            this.uiButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.uiButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uiButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiButton3.Location = new System.Drawing.Point(502, 3);
+            this.uiButton3.Name = "uiButton3";
+            this.uiButton3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton3.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiButton3.OnHoverTextColor = System.Drawing.Color.White;
+            this.uiButton3.Size = new System.Drawing.Size(161, 84);
+            this.uiButton3.TabIndex = 11;
+            this.uiButton3.Text = "FUNDOS";
+            this.uiButton3.TextColor = System.Drawing.Color.White;
+            this.uiButton3.UseVisualStyleBackColor = false;
+            // 
+            // uiButton2
+            // 
+            this.uiButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiButton2.FlatAppearance.BorderSize = 0;
+            this.uiButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.uiButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uiButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiButton2.Location = new System.Drawing.Point(669, 3);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiButton2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.uiButton2.Size = new System.Drawing.Size(162, 84);
+            this.uiButton2.TabIndex = 10;
+            this.uiButton2.Text = "RELATÓRIOS";
+            this.uiButton2.TextColor = System.Drawing.Color.White;
+            this.uiButton2.UseVisualStyleBackColor = false;
+            // 
+            // uiPanelConteudo
+            // 
+            this.uiPanelConteudo.Location = new System.Drawing.Point(0, 249);
+            this.uiPanelConteudo.Name = "uiPanelConteudo";
+            this.uiPanelConteudo.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.uiPanelConteudo.PanelRadius = 5;
+            this.uiPanelConteudo.Size = new System.Drawing.Size(834, 319);
+            this.uiPanelConteudo.TabIndex = 11;
+            // 
             // uctExecutive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.uiPanelConteudo);
             this.Controls.Add(this.uiFlowPanel1);
             this.Controls.Add(this.uiPanelControl);
             this.Name = "uctExecutive";
@@ -227,10 +239,11 @@
         private System.Windows.Forms.Label lblTextControl;
         private System.Windows.Forms.PictureBox picImageControl;
         private uiCSB.Component.uiFlowPanel uiFlowPanel1;
-        private uiCSB.Component.uiButton uiBtnAcessibilidade;
+        private uiCSB.Component.uiButton uiBtnFuncionario;
         private uiCSB.Component.uiButton uiButton1;
         private uiCSB.Component.uiButton uiButton2;
         private uiCSB.Component.uiButton uiButton3;
         private uiCSB.Component.uiButton uiButton4;
+        private uiCSB.Component.uiPanel uiPanelConteudo;
     }
 }
