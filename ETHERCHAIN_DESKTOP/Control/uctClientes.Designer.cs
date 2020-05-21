@@ -67,14 +67,14 @@
             this.uiPanel12 = new uiCSB.Component.uiPanel();
             this.uiButtonCancelar = new uiCSB.Component.uiButton();
             this.label15 = new System.Windows.Forms.Label();
-            this.uiFlowPanel1 = new uiCSB.Component.uiFlowPanel();
+            this.uiFlowPanel = new uiCSB.Component.uiFlowPanel();
             this.uiPanelPesquisa = new uiCSB.Component.uiPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.uiTxtSearch = new uiCSB.Component.uiTextBox();
             this.uiPanelCliente = new uiCSB.Component.uiPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPanelCPF = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPanelNome = new System.Windows.Forms.Label();
             this.uiPanelControl = new uiCSB.Component.uiPanel();
             this.lblDescControl = new System.Windows.Forms.Label();
             this.lblTextControl = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.uiPanel10.SuspendLayout();
             this.uiNameBackground.SuspendLayout();
             this.uiPanel12.SuspendLayout();
-            this.uiFlowPanel1.SuspendLayout();
+            this.uiFlowPanel.SuspendLayout();
             this.uiPanelPesquisa.SuspendLayout();
             this.uiPanelCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -610,15 +610,15 @@
             this.label15.TabIndex = 12;
             this.label15.Text = "VALIDE COM O CLIENTE";
             // 
-            // uiFlowPanel1
+            // uiFlowPanel
             // 
-            this.uiFlowPanel1.Controls.Add(this.uiPanelPesquisa);
-            this.uiFlowPanel1.Controls.Add(this.uiPanelCliente);
-            this.uiFlowPanel1.FlowPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiFlowPanel1.Location = new System.Drawing.Point(0, 143);
-            this.uiFlowPanel1.Name = "uiFlowPanel1";
-            this.uiFlowPanel1.Size = new System.Drawing.Size(249, 425);
-            this.uiFlowPanel1.TabIndex = 7;
+            this.uiFlowPanel.Controls.Add(this.uiPanelPesquisa);
+            this.uiFlowPanel.Controls.Add(this.uiPanelCliente);
+            this.uiFlowPanel.FlowPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiFlowPanel.Location = new System.Drawing.Point(0, 143);
+            this.uiFlowPanel.Name = "uiFlowPanel";
+            this.uiFlowPanel.Size = new System.Drawing.Size(249, 425);
+            this.uiFlowPanel.TabIndex = 7;
             // 
             // uiPanelPesquisa
             // 
@@ -659,28 +659,29 @@
             // uiPanelCliente
             // 
             this.uiPanelCliente.BackColor = System.Drawing.Color.Transparent;
-            this.uiPanelCliente.Controls.Add(this.label1);
+            this.uiPanelCliente.Controls.Add(this.labelPanelCPF);
             this.uiPanelCliente.Controls.Add(this.pictureBox1);
-            this.uiPanelCliente.Controls.Add(this.label2);
+            this.uiPanelCliente.Controls.Add(this.lblPanelNome);
             this.uiPanelCliente.Location = new System.Drawing.Point(3, 67);
             this.uiPanelCliente.Name = "uiPanelCliente";
             this.uiPanelCliente.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.uiPanelCliente.PanelRadius = 5;
             this.uiPanelCliente.Size = new System.Drawing.Size(241, 86);
             this.uiPanelCliente.TabIndex = 0;
+            this.uiPanelCliente.Visible = false;
             this.uiPanelCliente.Click += new System.EventHandler(this.uiPanelCliente_Click);
             // 
-            // label1
+            // labelPanelCPF
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
-            this.label1.Location = new System.Drawing.Point(87, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 14);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "CPF: ";
+            this.labelPanelCPF.AutoSize = true;
+            this.labelPanelCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.labelPanelCPF.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPanelCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
+            this.labelPanelCPF.Location = new System.Drawing.Point(87, 27);
+            this.labelPanelCPF.Name = "labelPanelCPF";
+            this.labelPanelCPF.Size = new System.Drawing.Size(33, 14);
+            this.labelPanelCPF.TabIndex = 8;
+            this.labelPanelCPF.Text = "CPF: ";
             // 
             // pictureBox1
             // 
@@ -692,17 +693,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblPanelNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(63)))), ((int)(((byte)(153)))));
-            this.label2.Location = new System.Drawing.Point(85, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Nome";
+            this.lblPanelNome.AutoSize = true;
+            this.lblPanelNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.lblPanelNome.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPanelNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(63)))), ((int)(((byte)(153)))));
+            this.lblPanelNome.Location = new System.Drawing.Point(85, 6);
+            this.lblPanelNome.Name = "lblPanelNome";
+            this.lblPanelNome.Size = new System.Drawing.Size(64, 21);
+            this.lblPanelNome.TabIndex = 7;
+            this.lblPanelNome.Text = "Nome";
             // 
             // uiPanelControl
             // 
@@ -758,7 +759,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.uiPanelCentral);
-            this.Controls.Add(this.uiFlowPanel1);
+            this.Controls.Add(this.uiFlowPanel);
             this.Controls.Add(this.uiPanelControl);
             this.Name = "uctClientes";
             this.Size = new System.Drawing.Size(834, 568);
@@ -779,7 +780,7 @@
             this.uiNameBackground.PerformLayout();
             this.uiPanel12.ResumeLayout(false);
             this.uiPanel12.PerformLayout();
-            this.uiFlowPanel1.ResumeLayout(false);
+            this.uiFlowPanel.ResumeLayout(false);
             this.uiPanelPesquisa.ResumeLayout(false);
             this.uiPanelPesquisa.PerformLayout();
             this.uiPanelCliente.ResumeLayout(false);
@@ -798,11 +799,11 @@
         private System.Windows.Forms.Label lblDescControl;
         private System.Windows.Forms.Label lblTextControl;
         private System.Windows.Forms.PictureBox picImageControl;
-        private uiCSB.Component.uiFlowPanel uiFlowPanel1;
+        private uiCSB.Component.uiFlowPanel uiFlowPanel;
         private uiCSB.Component.uiPanel uiPanelCliente;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPanelCPF;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPanelNome;
         private uiCSB.Component.uiPanel uiPanelPesquisa;
         private uiCSB.Component.uiTextBox uiTxtSearch;
         private uiCSB.Component.uiPanel uiPanelCentral;
