@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using uiCSB.Toastr;
+using Type = uiCSB.Toastr.Type;
 
 namespace Etherchain.Common
 {
@@ -51,7 +53,7 @@ namespace Etherchain.Common
 
         private Employee obter(SqlDataReader reader) => new Employee
         {
-            EmployeeId = UtilConvert.ToInt(reader["EMPLOYEE_ID"]),
+            EmployeeId = UtilConvert.ToInt(reader["ID"]),
             ArchiveId = UtilConvert.ToInt(reader["ARCHIVE_ID"]),
             Email = UtilConvert.ToString(reader["EMAIL"]),
             Words = UtilConvert.ToString(reader["WORDS"]),
@@ -74,7 +76,7 @@ namespace Etherchain.Common
         {
             sqlSelect objSelect = new sqlSelect();
             objSelect.table("Employee");
-            objSelect.Where.where("EMPLOYEE_ID", EmployeeId);
+            objSelect.Where.where("ID", EmployeeId);    
 
             SqlDataReader reader = objSelect.execute(App.DatabaseSql);
             Employee employee = null;
@@ -86,6 +88,7 @@ namespace Etherchain.Common
 
             return employee;
         }
+
         public Employee ObterPorEmail()
         {
             sqlSelect objSelect = new sqlSelect();
@@ -102,6 +105,7 @@ namespace Etherchain.Common
 
             return employee;
         }
+
         public Employee ObterPorCPF()
         {
             sqlSelect objSelect = new sqlSelect();
@@ -118,6 +122,7 @@ namespace Etherchain.Common
 
             return employee;
         }
+
         public Employee ObterPorRG()
         {
             sqlSelect objSelect = new sqlSelect();
@@ -134,6 +139,7 @@ namespace Etherchain.Common
 
             return employee;
         }
+
         public List<Employee> ObterTodos()
         {
             sqlSelect objSelect = new sqlSelect();
@@ -147,6 +153,7 @@ namespace Etherchain.Common
 
             return employee;
         }
+
         public void Gravar()
         {
             sqlInsert objInsert = new sqlInsert();
@@ -169,12 +176,15 @@ namespace Etherchain.Common
                 .val("MOBILE_NUMBER", MobileNumber);
 
             EmployeeId = objInsert.executeWithOutput(App.DatabaseSql);
+
+            new Alert("O Funcionário foi devidamente cadastrado.", Type.Info);
         }
+
         public void AlterarPorId()
         {
             sqlUpdate objUpdate = new sqlUpdate();
             objUpdate.table("Employee");
-            objUpdate.Where.where("EMPLOYEE_ID", EmployeeId);
+            objUpdate.Where.where("ID", EmployeeId);
             objUpdate.Value.val("ARCHIVE_ID", ArchiveId)
                 .val("EMAIL", Email)
                 .val("CPF", CPF)
@@ -193,6 +203,8 @@ namespace Etherchain.Common
                 .val("MOBILE_NUMBER", MobileNumber);
 
             objUpdate.execute(App.DatabaseSql);
+
+            new Alert("O Funcionário foi devidamente alterado.", Type.Info);
         }
     }
 }
