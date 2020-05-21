@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNomeEmployee = new System.Windows.Forms.Label();
             this.uiPanelEmployeData = new uiCSB.Component.uiPanel();
+            this.btnCriar = new uiCSB.Component.uiButton();
             this.uiPanel5 = new uiCSB.Component.uiPanel();
             this.lblArchiveId = new System.Windows.Forms.Label();
             this.lblEmployeeId = new System.Windows.Forms.Label();
@@ -62,6 +63,8 @@
             this.uiTxtLogradouro = new uiCSB.Component.uiTextBox();
             this.btnCancelar = new uiCSB.Component.uiButton();
             this.uiPanel3 = new uiCSB.Component.uiPanel();
+            this.lblFeminino = new System.Windows.Forms.Label();
+            this.lblMasculino = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.uiTxtUNome = new uiCSB.Component.uiTextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -78,7 +81,6 @@
             this.uiTxtPNome = new uiCSB.Component.uiTextBox();
             this.btnAtualizar = new uiCSB.Component.uiButton();
             this.uiPanel1 = new uiCSB.Component.uiPanel();
-            this.btnCriar = new uiCSB.Component.uiButton();
             this.uiFlowPanel2.SuspendLayout();
             this.uiFlowPanel.SuspendLayout();
             this.uiPanelPesquisa.SuspendLayout();
@@ -214,6 +216,26 @@
             this.uiPanelEmployeData.Size = new System.Drawing.Size(564, 309);
             this.uiPanelEmployeData.TabIndex = 9;
             // 
+            // btnCriar
+            // 
+            this.btnCriar.BorderColor = System.Drawing.Color.White;
+            this.btnCriar.ButtonColor = System.Drawing.Color.SpringGreen;
+            this.btnCriar.FlatAppearance.BorderSize = 0;
+            this.btnCriar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCriar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriar.Location = new System.Drawing.Point(481, 245);
+            this.btnCriar.Name = "btnCriar";
+            this.btnCriar.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btnCriar.OnHoverButtonColor = System.Drawing.Color.LimeGreen;
+            this.btnCriar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCriar.Size = new System.Drawing.Size(80, 60);
+            this.btnCriar.TabIndex = 22;
+            this.btnCriar.Text = "CRIAR";
+            this.btnCriar.TextColor = System.Drawing.Color.White;
+            this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnCriar.Click += new System.EventHandler(this.btnCriar_ClickAsync);
+            // 
             // uiPanel5
             // 
             this.uiPanel5.BackColor = System.Drawing.Color.Transparent;
@@ -277,7 +299,7 @@
             this.uiTxtTelCel.Location = new System.Drawing.Point(145, 27);
             this.uiTxtTelCel.Name = "uiTxtTelCel";
             this.uiTxtTelCel.Size = new System.Drawing.Size(149, 26);
-            this.uiTxtTelCel.TabIndex = 10;
+            this.uiTxtTelCel.TabIndex = 16;
             this.uiTxtTelCel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
@@ -301,7 +323,7 @@
             this.uiTxtTelFixo.Location = new System.Drawing.Point(4, 27);
             this.uiTxtTelFixo.Name = "uiTxtTelFixo";
             this.uiTxtTelFixo.Size = new System.Drawing.Size(135, 26);
-            this.uiTxtTelFixo.TabIndex = 8;
+            this.uiTxtTelFixo.TabIndex = 15;
             this.uiTxtTelFixo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // uiTxtNumero
@@ -349,7 +371,7 @@
             this.uiTxtPais.Location = new System.Drawing.Point(4, 82);
             this.uiTxtPais.Name = "uiTxtPais";
             this.uiTxtPais.Size = new System.Drawing.Size(138, 26);
-            this.uiTxtPais.TabIndex = 19;
+            this.uiTxtPais.TabIndex = 11;
             this.uiTxtPais.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -373,7 +395,7 @@
             this.uiTextBox1.Location = new System.Drawing.Point(265, 25);
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.Size = new System.Drawing.Size(108, 26);
-            this.uiTextBox1.TabIndex = 17;
+            this.uiTextBox1.TabIndex = 9;
             this.uiTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -397,7 +419,7 @@
             this.uiTxtBairro.Location = new System.Drawing.Point(379, 25);
             this.uiTxtBairro.Name = "uiTxtBairro";
             this.uiTxtBairro.Size = new System.Drawing.Size(176, 26);
-            this.uiTxtBairro.TabIndex = 16;
+            this.uiTxtBairro.TabIndex = 10;
             this.uiTxtBairro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -445,7 +467,7 @@
             this.uiTxtCep.Location = new System.Drawing.Point(446, 82);
             this.uiTxtCep.Name = "uiTxtCep";
             this.uiTxtCep.Size = new System.Drawing.Size(108, 26);
-            this.uiTxtCep.TabIndex = 11;
+            this.uiTxtCep.TabIndex = 14;
             this.uiTxtCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // uiTxtEstado
@@ -457,7 +479,7 @@
             this.uiTxtEstado.Location = new System.Drawing.Point(280, 82);
             this.uiTxtEstado.Name = "uiTxtEstado";
             this.uiTxtEstado.Size = new System.Drawing.Size(160, 26);
-            this.uiTxtEstado.TabIndex = 10;
+            this.uiTxtEstado.TabIndex = 13;
             this.uiTxtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // uiTxtCidade
@@ -469,7 +491,7 @@
             this.uiTxtCidade.Location = new System.Drawing.Point(148, 82);
             this.uiTxtCidade.Name = "uiTxtCidade";
             this.uiTxtCidade.Size = new System.Drawing.Size(126, 26);
-            this.uiTxtCidade.TabIndex = 9;
+            this.uiTxtCidade.TabIndex = 12;
             this.uiTxtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -520,6 +542,8 @@
             // uiPanel3
             // 
             this.uiPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.uiPanel3.Controls.Add(this.lblFeminino);
+            this.uiPanel3.Controls.Add(this.lblMasculino);
             this.uiPanel3.Controls.Add(this.label15);
             this.uiPanel3.Controls.Add(this.uiTxtUNome);
             this.uiPanel3.Controls.Add(this.label16);
@@ -540,6 +564,32 @@
             this.uiPanel3.PanelRadius = 5;
             this.uiPanel3.Size = new System.Drawing.Size(558, 113);
             this.uiPanel3.TabIndex = 16;
+            // 
+            // lblFeminino
+            // 
+            this.lblFeminino.AutoSize = true;
+            this.lblFeminino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(50)))), ((int)(((byte)(122)))));
+            this.lblFeminino.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeminino.ForeColor = System.Drawing.Color.White;
+            this.lblFeminino.Location = new System.Drawing.Point(534, 28);
+            this.lblFeminino.Name = "lblFeminino";
+            this.lblFeminino.Size = new System.Drawing.Size(17, 19);
+            this.lblFeminino.TabIndex = 22;
+            this.lblFeminino.Text = "F";
+            this.lblFeminino.Click += new System.EventHandler(this.lblGenero_Click);
+            // 
+            // lblMasculino
+            // 
+            this.lblMasculino.AutoSize = true;
+            this.lblMasculino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(50)))), ((int)(((byte)(122)))));
+            this.lblMasculino.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMasculino.ForeColor = System.Drawing.Color.White;
+            this.lblMasculino.Location = new System.Drawing.Point(511, 28);
+            this.lblMasculino.Name = "lblMasculino";
+            this.lblMasculino.Size = new System.Drawing.Size(23, 19);
+            this.lblMasculino.TabIndex = 21;
+            this.lblMasculino.Text = "M";
+            this.lblMasculino.Click += new System.EventHandler(this.lblGenero_Click);
             // 
             // label15
             // 
@@ -562,7 +612,7 @@
             this.uiTxtUNome.Location = new System.Drawing.Point(139, 25);
             this.uiTxtUNome.Name = "uiTxtUNome";
             this.uiTxtUNome.Size = new System.Drawing.Size(182, 26);
-            this.uiTxtUNome.TabIndex = 19;
+            this.uiTxtUNome.TabIndex = 2;
             this.uiTxtUNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
@@ -579,14 +629,20 @@
             // 
             // uiTxtSexo
             // 
+            this.uiTxtSexo.AutoCompleteCustomSource.AddRange(new string[] {
+            "M",
+            "F"});
+            this.uiTxtSexo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.uiTxtSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(50)))), ((int)(((byte)(122)))));
             this.uiTxtSexo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uiTxtSexo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.uiTxtSexo.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiTxtSexo.ForeColor = System.Drawing.Color.White;
             this.uiTxtSexo.Location = new System.Drawing.Point(509, 25);
             this.uiTxtSexo.Name = "uiTxtSexo";
+            this.uiTxtSexo.ReadOnly = true;
             this.uiTxtSexo.Size = new System.Drawing.Size(46, 26);
-            this.uiTxtSexo.TabIndex = 17;
+            this.uiTxtSexo.TabIndex = 4;
             this.uiTxtSexo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
@@ -610,7 +666,7 @@
             this.uiTxtDataNasc.Location = new System.Drawing.Point(327, 25);
             this.uiTxtDataNasc.Name = "uiTxtDataNasc";
             this.uiTxtDataNasc.Size = new System.Drawing.Size(176, 26);
-            this.uiTxtDataNasc.TabIndex = 16;
+            this.uiTxtDataNasc.TabIndex = 3;
             this.uiTxtDataNasc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -658,7 +714,7 @@
             this.uiTxtEmail.Location = new System.Drawing.Point(265, 79);
             this.uiTxtEmail.Name = "uiTxtEmail";
             this.uiTxtEmail.Size = new System.Drawing.Size(290, 26);
-            this.uiTxtEmail.TabIndex = 11;
+            this.uiTxtEmail.TabIndex = 7;
             this.uiTxtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // uiTxtRG
@@ -670,7 +726,7 @@
             this.uiTxtRG.Location = new System.Drawing.Point(148, 79);
             this.uiTxtRG.Name = "uiTxtRG";
             this.uiTxtRG.Size = new System.Drawing.Size(111, 26);
-            this.uiTxtRG.TabIndex = 10;
+            this.uiTxtRG.TabIndex = 6;
             this.uiTxtRG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // uiTxtCPF
@@ -683,7 +739,7 @@
             this.uiTxtCPF.Name = "uiTxtCPF";
             this.uiTxtCPF.ReadOnly = true;
             this.uiTxtCPF.Size = new System.Drawing.Size(138, 26);
-            this.uiTxtCPF.TabIndex = 9;
+            this.uiTxtCPF.TabIndex = 5;
             this.uiTxtCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
@@ -707,7 +763,7 @@
             this.uiTxtPNome.Location = new System.Drawing.Point(4, 25);
             this.uiTxtPNome.Name = "uiTxtPNome";
             this.uiTxtPNome.Size = new System.Drawing.Size(129, 26);
-            this.uiTxtPNome.TabIndex = 8;
+            this.uiTxtPNome.TabIndex = 1;
             this.uiTxtPNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAtualizar
@@ -741,25 +797,6 @@
             this.uiPanel1.PanelRadius = 5;
             this.uiPanel1.Size = new System.Drawing.Size(834, 330);
             this.uiPanel1.TabIndex = 15;
-            // 
-            // btnCriar
-            // 
-            this.btnCriar.BorderColor = System.Drawing.Color.White;
-            this.btnCriar.ButtonColor = System.Drawing.Color.SpringGreen;
-            this.btnCriar.FlatAppearance.BorderSize = 0;
-            this.btnCriar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCriar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCriar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriar.Location = new System.Drawing.Point(481, 245);
-            this.btnCriar.Name = "btnCriar";
-            this.btnCriar.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btnCriar.OnHoverButtonColor = System.Drawing.Color.LimeGreen;
-            this.btnCriar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCriar.Size = new System.Drawing.Size(80, 60);
-            this.btnCriar.TabIndex = 22;
-            this.btnCriar.Text = "CRIAR";
-            this.btnCriar.TextColor = System.Drawing.Color.White;
-            this.btnCriar.UseVisualStyleBackColor = true;
             // 
             // uctFuncionario
             // 
@@ -840,5 +877,7 @@
         private System.Windows.Forms.Label lblEmployeeId;
         private System.Windows.Forms.Label lblArchiveId;
         private uiCSB.Component.uiButton btnCriar;
+        private System.Windows.Forms.Label lblMasculino;
+        private System.Windows.Forms.Label lblFeminino;
     }
 }

@@ -15,6 +15,10 @@ using System.Drawing.Text;
 using System.Windows.Markup;
 using uiCSB.Toastr;
 using Type = uiCSB.Toastr.Type;
+using System.Net.Http;
+using System.Web;
+using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace Etherchain.Desktop.Control.Executive
 {
@@ -27,6 +31,8 @@ namespace Etherchain.Desktop.Control.Executive
 
         private void uctFuncionario_Load(object sender, EventArgs e)
         {
+            uiTxtCPF.ReadOnly = false;
+
             List<Employee> employee = new Employee { }.ObterTodos();
 
             for (int i = 0; i < employee.Count; i++)
@@ -99,7 +105,11 @@ namespace Etherchain.Desktop.Control.Executive
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("Não existe funcionário com este CPF.");
+                new Alert("CPF inválido ou não cadastrado.", Type.Warning);
+            }
+            catch (Exception e)
+            {
+                new Alert(e.Message, Type.Warning);
             }
         }
 
@@ -108,7 +118,6 @@ namespace Etherchain.Desktop.Control.Executive
             if (uiTxtSearch.TextLength == 11)
             {
                 Employee employee = new Employee { CPF = uiTxtSearch.Text }.ObterPorCPF();
-
                 CreateUserPanel(employee, uiFlowPanel);
             }
         }
@@ -157,11 +166,13 @@ namespace Etherchain.Desktop.Control.Executive
             btnCriar.Visible = false;
             btnCancelar.Visible = true;
             btnAtualizar.Visible = true;
+            uiTxtCPF.ReadOnly = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             PreencheDadosEmployee(new Employee { CPF = uiTxtCPF.Text }.ObterPorCPF());
+            new Alert("Todas as alterações foram desfeitas.", Type.Info);
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -190,17 +201,115 @@ namespace Etherchain.Desktop.Control.Executive
                     PostCode = uiTxtCep.Text,
                     MobileNumber = uiTxtTelCel.Text
                 }.AlterarPorId();
-
-                new Alert("Funcionário alterado com sucesso!", Type.Success);
             }
             catch (NullReferenceException)
             {
-
+                new Alert("Preencha todos os campos antes de atualizar.", Type.Warning);
             }
             catch (Exception ex)
             {
-
+                new Alert(ex.Message, Type.Warning);
             }
+        }
+
+        private async Task<string> RandomWordsAsync(int quantidade)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://random-word-api.herokuapp.com/");
+
+                HttpResponseMessage response = await client.GetAsync("word?number=" + quantidade);
+                Debug.WriteLine(response);
+                if (response.IsSuccessStatusCode)
+                {
+                    List<string> Words = null;
+                    var wordsString = await response.Content.ReadAsStringAsync();
+                    wordsString.Replace("[", "").Replace("\",\"", " ");
+                    Words = JsonConvert.DeserializeObject<List<string>>(wordsString);
+
+                    StringBuilder stringBuilder = new StringBuilder();
+
+                    foreach (var item in Words)
+                    {
+                        stringBuilder.Append(item + " ");
+                    }
+
+                    return stringBuilder.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao obter o produto : " + response.StatusCode);
+                }
+            }
+            return "";
+        }
+
+        private void btnCriar_ClickAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                new Employee
+                {
+                    Words = UtilConvert.ToString(RandomWordsAsync(12)),
+                    WordsLanguage = UtilConvert.ToString("en-US"),
+                    FirstName = UtilConvert.ToString(uiTxtPNome.Text),
+                    LastName = UtilConvert.ToString(uiTxtUNome.Text),
+                    ArchiveId = 1,
+                    DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
+                    Gender = UtilConvert.ToChar(uiTxtSexo.Text),
+                    CPF = uiTxtCPF.Text,
+                    RG = uiTxtRG.Text,
+                    Email = uiTxtEmail.Text,
+                    StreetLine = uiTxtLogradouro.Text,
+                    //uiTxtNumero.Text,
+                    //uiTxtBairro.Text,
+                    Country = uiTxtPais.Text,
+                    City = uiTxtCidade.Text,
+                    Region = uiTxtEstado.Text,
+                    PostCode = uiTxtCep.Text,
+                    MobileNumber = uiTxtTelCel.Text
+                }.Gravar();
+            }
+            catch (NullReferenceException)
+            {
+                new Alert("Preencha todos os campos antes de atualizar.", Type.Warning);
+            }
+            catch (Exception ex)
+            {
+                new Alert(ex.Message, Type.Warning);
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private bool Validar(Employee employee)
+        {
+            StringBuilder validador = new StringBuilder();
+
+            if (!UtilValidar.validarEmail(employee.Email))
+            {
+                validador.Append("false ");
+            }
+
+            if (!UtilValidar.validarCPF(employee.CPF))
+            {
+                validador.Append("false ");
+            }
+
+            if (!UtilValidar.validarGenero(employee.Gender))
+            {
+                validador.Append("false ");
+            }
+
+            return false;
+        }
+
+        private void lblGenero_Click(object sender, EventArgs e)
+        {
+            Label label = sender as Label;
+            lblFeminino.ForeColor = Color.White;
+            lblMasculino.ForeColor = Color.White;
+            label.ForeColor = Color.FromArgb(72, 84, 179);
+            uiTxtSexo.Text = label.Text;
         }
     }
 }
