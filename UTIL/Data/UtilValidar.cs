@@ -86,6 +86,19 @@ namespace caiosb.Util.Data
             return _cnpjValidator.IsValid(val);
         }
 
+        public static bool validarGenero(Char val)
+        {
+            if (val.Equals("M"))
+            {
+                return val.Equals("M");
+            }
+            else if (val.Equals("F"))
+            {
+                return val.Equals("F");
+            }
+            return false;
+        }
+
         public static bool validarEmail(String val)
         {
             try
@@ -101,7 +114,8 @@ namespace caiosb.Util.Data
 
         public static bool validarCartaoValidade(String val)
         {
-            if (DateTime.TryParseExact(val, "MM/yy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.AssumeLocal, out DateTime result)){
+            if (DateTime.TryParseExact(val, "MM/yy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.AssumeLocal, out DateTime result))
+            {
                 return validarDataFutura(result.Date);
             }
             return false;
