@@ -16,6 +16,8 @@ namespace caiosb.Util
                 control.Visible = false;
             }
 
+            pnlConteudo.Controls.Add(userControl);
+
             userControl.Location = new System.Drawing.Point(0, 0);
 
             userControl.Visible = true;
