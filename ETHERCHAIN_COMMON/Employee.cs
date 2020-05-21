@@ -52,6 +52,7 @@ namespace Etherchain.Common
         private Employee obter(SqlDataReader reader) => new Employee
         {
             EmployeeId = UtilConvert.ToInt(reader["EMPLOYEE_ID"]),
+            ArchiveId = UtilConvert.ToInt(reader["ARCHIVE_ID"]),
             Email = UtilConvert.ToString(reader["EMAIL"]),
             Words = UtilConvert.ToString(reader["WORDS"]),
             WordsLanguage = UtilConvert.ToString(reader["WORDS_LANGUAGE"]),
@@ -138,8 +139,8 @@ namespace Etherchain.Common
             sqlSelect objSelect = new sqlSelect();
             objSelect.table("Employee");
 
+            List<Employee> employee = new List<Employee>();
             SqlDataReader reader = objSelect.execute(App.DatabaseSql);
-            List<Employee> employee = null;
             while (reader.Read())
                 employee.Add(obter(reader));
             reader.Close();
@@ -173,13 +174,13 @@ namespace Etherchain.Common
         {
             sqlUpdate objUpdate = new sqlUpdate();
             objUpdate.table("Employee");
-            objUpdate.Where.where("ID", EmployeeId);
+            objUpdate.Where.where("EMPLOYEE_ID", EmployeeId);
             objUpdate.Value.val("ARCHIVE_ID", ArchiveId)
                 .val("EMAIL", Email)
                 .val("CPF", CPF)
                 .val("RG", RG)
-                .val("WORDS", Words)
-                .val("WORDS_LANGUAGE", WordsLanguage)
+                //.val("WORDS", Words)
+                //.val("WORDS_LANGUAGE", WordsLanguage)
                 .val("GENDER", Gender)
                 .val("COUNTRY", Country)
                 .val("FIRST_NAME", FirstName)

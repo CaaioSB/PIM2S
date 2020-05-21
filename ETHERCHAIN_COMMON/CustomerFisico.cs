@@ -13,14 +13,14 @@ namespace ETHERCHAIN_COMMON
         private char _gender;
         private string _firstName;
         private string _lastName;
-        private DateTime _dataNascimento;
+        private DateTime _dataBirth;
 
         public string CPF { get => _CPF; set => _CPF = value; }
         public string RG { get => _RG; set => _RG = value; }
         public char Gender { get => _gender; set => _gender = value; }
         public string FirstName { get => _firstName; set => _firstName = value; }
         public string LastName { get => _lastName; set => _lastName = value; }
-        public DateTime DataNascimento { get => _dataNascimento; set => _dataNascimento = value; }
+        public DateTime DataBirth { get => _dataBirth; set => _dataBirth = value; }
 
         public CustomerFisico ObterPorCPF()
         {
