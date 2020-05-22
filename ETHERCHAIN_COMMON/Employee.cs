@@ -1,5 +1,6 @@
 ﻿using caiosb.SqlMaster;
 using caiosb.SqlMaster.Command;
+using caiosb.SqlMaster.Element.Where;
 using caiosb.Util.Data;
 using ETHERCHAIN_COMMON;
 using System;
@@ -115,9 +116,7 @@ namespace Etherchain.Common
             SqlDataReader reader = objSelect.execute(App.DatabaseSql);
             Employee employee = null;
             if (reader.Read())
-            {
                 employee = obter(reader);
-            }
             reader.Close();
 
             return employee;
