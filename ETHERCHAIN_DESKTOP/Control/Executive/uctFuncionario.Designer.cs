@@ -33,10 +33,6 @@
             this.uiPanelPesquisa = new uiCSB.Component.uiPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.uiTxtSearch = new uiCSB.Component.uiTextBox();
-            this.uiPanelEmployee = new uiCSB.Component.uiPanel();
-            this.lblCPFEmployee = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNomeEmployee = new System.Windows.Forms.Label();
             this.uiPanelEmployeData = new uiCSB.Component.uiPanel();
             this.btnCriar = new uiCSB.Component.uiButton();
             this.uiPanel5 = new uiCSB.Component.uiPanel();
@@ -82,10 +78,7 @@
             this.btnAtualizar = new uiCSB.Component.uiButton();
             this.uiPanel1 = new uiCSB.Component.uiPanel();
             this.uiFlowPanel2.SuspendLayout();
-            this.uiFlowPanel.SuspendLayout();
             this.uiPanelPesquisa.SuspendLayout();
-            this.uiPanelEmployee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiPanelEmployeData.SuspendLayout();
             this.uiPanel5.SuspendLayout();
             this.uiTxtNumero.SuspendLayout();
@@ -96,23 +89,21 @@
             // uiFlowPanel2
             // 
             this.uiFlowPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiFlowPanel2.Controls.Add(this.uiFlowPanel);
             this.uiFlowPanel2.Controls.Add(this.uiPanelEmployeData);
             this.uiFlowPanel2.FlowPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiFlowPanel2.Location = new System.Drawing.Point(6, 3);
+            this.uiFlowPanel2.Location = new System.Drawing.Point(265, 3);
             this.uiFlowPanel2.Name = "uiFlowPanel2";
-            this.uiFlowPanel2.Size = new System.Drawing.Size(823, 321);
+            this.uiFlowPanel2.Size = new System.Drawing.Size(564, 321);
             this.uiFlowPanel2.TabIndex = 14;
             // 
             // uiFlowPanel
             // 
+            this.uiFlowPanel.AutoScroll = true;
             this.uiFlowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiFlowPanel.Controls.Add(this.uiPanelPesquisa);
-            this.uiFlowPanel.Controls.Add(this.uiPanelEmployee);
             this.uiFlowPanel.FlowPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(223)))), ((int)(((byte)(255)))));
-            this.uiFlowPanel.Location = new System.Drawing.Point(3, 3);
+            this.uiFlowPanel.Location = new System.Drawing.Point(15, 66);
             this.uiFlowPanel.Name = "uiFlowPanel";
-            this.uiFlowPanel.Size = new System.Drawing.Size(247, 313);
+            this.uiFlowPanel.Size = new System.Drawing.Size(247, 258);
             this.uiFlowPanel.TabIndex = 8;
             // 
             // uiPanelPesquisa
@@ -120,11 +111,11 @@
             this.uiPanelPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.uiPanelPesquisa.Controls.Add(this.label4);
             this.uiPanelPesquisa.Controls.Add(this.uiTxtSearch);
-            this.uiPanelPesquisa.Location = new System.Drawing.Point(3, 3);
+            this.uiPanelPesquisa.Location = new System.Drawing.Point(38, 3);
             this.uiPanelPesquisa.Name = "uiPanelPesquisa";
             this.uiPanelPesquisa.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(63)))), ((int)(((byte)(153)))));
             this.uiPanelPesquisa.PanelRadius = 5;
-            this.uiPanelPesquisa.Size = new System.Drawing.Size(241, 58);
+            this.uiPanelPesquisa.Size = new System.Drawing.Size(221, 58);
             this.uiPanelPesquisa.TabIndex = 9;
             // 
             // label4
@@ -148,58 +139,10 @@
             this.uiTxtSearch.Location = new System.Drawing.Point(4, 25);
             this.uiTxtSearch.MaxLength = 11;
             this.uiTxtSearch.Name = "uiTxtSearch";
-            this.uiTxtSearch.Size = new System.Drawing.Size(234, 26);
+            this.uiTxtSearch.Size = new System.Drawing.Size(214, 26);
             this.uiTxtSearch.TabIndex = 8;
             this.uiTxtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.uiTxtSearch.TextChanged += new System.EventHandler(this.uiTxtSearch_TextChanged);
-            // 
-            // uiPanelEmployee
-            // 
-            this.uiPanelEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.uiPanelEmployee.Controls.Add(this.lblCPFEmployee);
-            this.uiPanelEmployee.Controls.Add(this.pictureBox1);
-            this.uiPanelEmployee.Controls.Add(this.lblNomeEmployee);
-            this.uiPanelEmployee.Location = new System.Drawing.Point(3, 67);
-            this.uiPanelEmployee.Name = "uiPanelEmployee";
-            this.uiPanelEmployee.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.uiPanelEmployee.PanelRadius = 5;
-            this.uiPanelEmployee.Size = new System.Drawing.Size(241, 86);
-            this.uiPanelEmployee.TabIndex = 0;
-            this.uiPanelEmployee.Visible = false;
-            // 
-            // lblCPFEmployee
-            // 
-            this.lblCPFEmployee.AutoEllipsis = true;
-            this.lblCPFEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.lblCPFEmployee.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPFEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
-            this.lblCPFEmployee.Location = new System.Drawing.Point(87, 27);
-            this.lblCPFEmployee.Name = "lblCPFEmployee";
-            this.lblCPFEmployee.Size = new System.Drawing.Size(151, 14);
-            this.lblCPFEmployee.TabIndex = 8;
-            this.lblCPFEmployee.Text = "CPF: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Etherchain.Desktop.Properties.Resources.male;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblNomeEmployee
-            // 
-            this.lblNomeEmployee.AutoEllipsis = true;
-            this.lblNomeEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.lblNomeEmployee.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(63)))), ((int)(((byte)(153)))));
-            this.lblNomeEmployee.Location = new System.Drawing.Point(85, 6);
-            this.lblNomeEmployee.Name = "lblNomeEmployee";
-            this.lblNomeEmployee.Size = new System.Drawing.Size(153, 21);
-            this.lblNomeEmployee.TabIndex = 7;
-            this.lblNomeEmployee.Text = "Nome";
             // 
             // uiPanelEmployeData
             // 
@@ -209,7 +152,7 @@
             this.uiPanelEmployeData.Controls.Add(this.btnCancelar);
             this.uiPanelEmployeData.Controls.Add(this.uiPanel3);
             this.uiPanelEmployeData.Controls.Add(this.btnAtualizar);
-            this.uiPanelEmployeData.Location = new System.Drawing.Point(256, 3);
+            this.uiPanelEmployeData.Location = new System.Drawing.Point(3, 3);
             this.uiPanelEmployeData.Name = "uiPanelEmployeData";
             this.uiPanelEmployeData.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.uiPanelEmployeData.PanelRadius = 5;
@@ -790,6 +733,8 @@
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.uiPanel1.Controls.Add(this.uiPanelPesquisa);
+            this.uiPanel1.Controls.Add(this.uiFlowPanel);
             this.uiPanel1.Controls.Add(this.uiFlowPanel2);
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
             this.uiPanel1.Name = "uiPanel1";
@@ -807,11 +752,8 @@
             this.Size = new System.Drawing.Size(834, 330);
             this.Load += new System.EventHandler(this.uctFuncionario_Load);
             this.uiFlowPanel2.ResumeLayout(false);
-            this.uiFlowPanel.ResumeLayout(false);
             this.uiPanelPesquisa.ResumeLayout(false);
             this.uiPanelPesquisa.PerformLayout();
-            this.uiPanelEmployee.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiPanelEmployeData.ResumeLayout(false);
             this.uiPanel5.ResumeLayout(false);
             this.uiPanel5.PerformLayout();
@@ -831,10 +773,6 @@
         private uiCSB.Component.uiPanel uiPanelPesquisa;
         private System.Windows.Forms.Label label4;
         private uiCSB.Component.uiTextBox uiTxtSearch;
-        private uiCSB.Component.uiPanel uiPanelEmployee;
-        private System.Windows.Forms.Label lblCPFEmployee;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblNomeEmployee;
         private uiCSB.Component.uiPanel uiPanel1;
         private uiCSB.Component.uiPanel uiPanelEmployeData;
         private uiCSB.Component.uiPanel uiPanel3;
