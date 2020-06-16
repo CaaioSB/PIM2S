@@ -104,6 +104,9 @@ namespace caiosb.SqlMaster.Helper
                             case sqlElementWhereCommon.whereOperation.LIKE:
                                 builder.Append("LIKE");
                                 break;
+                            case sqlElementWhereCommon.whereOperation.IS:
+                                builder.Append("IS");
+                                break;
                         }
                         builder.Append(' ');
                         if (common.Val != null)

@@ -17,6 +17,7 @@ namespace caiosb.SqlMaster.Element.Where
             MAJOR_EQUALS,
             LESS,
             LESS_EQUALS,
+            IS,
             LIKE
         }
 
