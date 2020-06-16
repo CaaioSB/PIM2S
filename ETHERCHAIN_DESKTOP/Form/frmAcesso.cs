@@ -59,6 +59,13 @@ namespace Etherchain.Formularios
 
                     AppDesktop.ActualEmployee = employee;
 
+                    Archive archive = new Archive
+                    {
+                        ArchiveId = employee.ArchiveId,
+                    }.ObterPorCod();
+                    
+                    AppDesktop.ActualArchive = archive;
+
                     this.Hide();
                     var form = new frmBase();
                     form.Closed += (s, args) => this.Close();
