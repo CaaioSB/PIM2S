@@ -24,5 +24,10 @@ namespace Etherchain.Control.Executive
         {
             UtilChangePanel.MudarConteudo(uiPanelConteudo, new uctFuncionario());
         }
+
+        private void uiBtnAcesso_Click(object sender, EventArgs e)
+        {
+            UtilChangePanel.MudarConteudo(uiPanelConteudo, new uctAcesso());
+        }
     }
 }
