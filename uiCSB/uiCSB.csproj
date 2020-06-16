@@ -99,6 +99,9 @@
     <Compile Include="Toastr\frmToasrt.Designer.cs">
       <DependentUpon>frmToasrt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\uiComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Util\RoundedForm.cs" />
     <Compile Include="Util\RoundedRectangle.cs" />
   </ItemGroup>
