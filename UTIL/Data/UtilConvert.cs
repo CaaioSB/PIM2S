@@ -24,6 +24,12 @@ namespace caiosb.Util.Data
             return null;
         }
 
+        public static byte[] ToByte(object val)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(val.ToString());
+            return bytes;
+        }
+
         public static double ToDouble(object val) => Convert.ToDouble(val);
 
         public static decimal? ToNullableDecimal(object val)
