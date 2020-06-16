@@ -1,12 +1,14 @@
 ﻿using caiosb.SqlMaster;
 using caiosb.SqlMaster.Command;
 using caiosb.SqlMaster.Element.Where;
+using caiosb.SqlMaster.Helper;
 using caiosb.Util.Data;
-using ETHERCHAIN_COMMON;
+using Etherchain.Common;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using uiCSB.Toastr;
@@ -24,9 +26,12 @@ namespace Etherchain.Common
         private string _country;
         private string _streetLine;
         private string _city;
+        private string _neighborhood;
         private string _region;
+        private string _number;
         private string _postCode;
         private string _mobileNumber;
+        private string _phoneNumber;
         private string _CPF;
         private string _RG;
         private char _gender;
@@ -42,9 +47,12 @@ namespace Etherchain.Common
         public string Country { get => _country; set => _country = value; }
         public string StreetLine { get => _streetLine; set => _streetLine = value; }
         public string City { get => _city; set => _city = value; }
+        public string Neighborhood { get => _neighborhood; set => _neighborhood = value; }
         public string Region { get => _region; set => _region = value; }
+        public string Number { get => _number; set => _number = value; }
         public string PostCode { get => _postCode; set => _postCode = value; }
         public string MobileNumber { get => _mobileNumber; set => _mobileNumber = value; }
+        public string PhoneNumber { get => _phoneNumber; set => _phoneNumber = value; }
         public string CPF { get => _CPF; set => _CPF = value; }
         public string RG { get => _RG; set => _RG = value; }
         public char Gender { get => _gender; set => _gender = value; }
@@ -62,9 +70,12 @@ namespace Etherchain.Common
             Country = UtilConvert.ToString(reader["COUNTRY"]),
             StreetLine = UtilConvert.ToString(reader["STREET_LINE"]),
             City = UtilConvert.ToString(reader["CITY"]),
+            Neighborhood = UtilConvert.ToString(reader["NEIGHBORHOOD"]),
             Region = UtilConvert.ToString(reader["REGION"]),
+            Number = UtilConvert.ToString(reader["NUMBER"]),
             PostCode = UtilConvert.ToString(reader["POSTCODE"]),
             MobileNumber = UtilConvert.ToString(reader["MOBILE_NUMBER"]),
+            PhoneNumber = UtilConvert.ToString(reader["PHONE_NUMBER"]),
             CPF = UtilConvert.ToString(reader["CPF"]),
             RG = UtilConvert.ToString(reader["RG"]),
             Gender = UtilConvert.ToChar(reader["GENDER"]),
@@ -72,6 +83,23 @@ namespace Etherchain.Common
             LastName = UtilConvert.ToString(reader["LAST_NAME"]),
             DateBirth = UtilConvert.ToDateTime(reader["DATE_BIRTH"]),
         };
+
+        public List<Employee> ObterDescadastrados()
+        {
+            sqlSelect objSelect = new sqlSelect();
+            objSelect.table("EMPLOYEE");
+            objSelect.Where.where("EMPLOYEE.ID", sqlElementWhereCommon.whereOperation.IS , null, sqlElementWhere.whereAssociation.OR)
+                            .where("ACCESS.EMPLOYEE_ID", sqlElementWhereCommon.whereOperation.IS , null);
+            objSelect.Join.fullJoin("ACCESS", "EMPLOYEE_ID", "EMPLOYEE.ID");
+
+            SqlDataReader reader = objSelect.execute(App.DatabaseSql);
+            List<Employee> employee = new List<Employee>();
+            while (reader.Read())
+                employee.Add(obter(reader));
+            reader.Close();
+
+            return employee;
+        }
 
         public Employee ObterPorId()
         {
@@ -112,6 +140,21 @@ namespace Etherchain.Common
             sqlSelect objSelect = new sqlSelect();
             objSelect.table("Employee");
             objSelect.Where.where("CPF", CPF);
+
+            SqlDataReader reader = objSelect.execute(App.DatabaseSql);
+            Employee employee = null;
+            if (reader.Read())
+                employee = obter(reader);
+            reader.Close();
+
+            return employee;
+        }
+
+        public Employee ObterInicialCPF()
+        {
+            sqlSelect objSelect = new sqlSelect();
+            objSelect.table("Employee");
+            objSelect.Where.where("CPF", CPF + "%");
 
             SqlDataReader reader = objSelect.execute(App.DatabaseSql);
             Employee employee = null;
@@ -170,9 +213,12 @@ namespace Etherchain.Common
                 .val("DATE_BIRTH", DateBirth)
                 .val("STREET_LINE", StreetLine)
                 .val("CITY", City)
+                .val("NEIGHBORHOOD", Neighborhood)
                 .val("REGION", Region)
+                .val("NUMBER", Number)
                 .val("POSTCODE", PostCode)
-                .val("MOBILE_NUMBER", MobileNumber);
+                .val("MOBILE_NUMBER", MobileNumber)
+                .val("PHONE_NUMBER", PhoneNumber);
 
             EmployeeId = objInsert.executeWithOutput(App.DatabaseSql);
 
@@ -197,9 +243,12 @@ namespace Etherchain.Common
                 .val("DATE_BIRTH", DateBirth)
                 .val("STREET_LINE", StreetLine)
                 .val("CITY", City)
+                .val("NEIGHBORHOOD", Neighborhood)
                 .val("REGION", Region)
+                .val("NUMBER", Number)
                 .val("POSTCODE", PostCode)
-                .val("MOBILE_NUMBER", MobileNumber);
+                .val("MOBILE_NUMBER", MobileNumber)
+                .val("PHONE_NUMBER", PhoneNumber);
 
             objUpdate.execute(App.DatabaseSql);
 
