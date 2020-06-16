@@ -34,7 +34,7 @@
             this.picImageControl = new System.Windows.Forms.PictureBox();
             this.uiFlowPanel1 = new uiCSB.Component.uiFlowPanel();
             this.uiBtnFuncionario = new uiCSB.Component.uiButton();
-            this.uiButton4 = new uiCSB.Component.uiButton();
+            this.uiBtnAcesso = new uiCSB.Component.uiButton();
             this.uiButton1 = new uiCSB.Component.uiButton();
             this.uiButton3 = new uiCSB.Component.uiButton();
             this.uiButton2 = new uiCSB.Component.uiButton();
@@ -94,7 +94,7 @@
             // uiFlowPanel1
             // 
             this.uiFlowPanel1.Controls.Add(this.uiBtnFuncionario);
-            this.uiFlowPanel1.Controls.Add(this.uiButton4);
+            this.uiFlowPanel1.Controls.Add(this.uiBtnAcesso);
             this.uiFlowPanel1.Controls.Add(this.uiButton1);
             this.uiFlowPanel1.Controls.Add(this.uiButton3);
             this.uiFlowPanel1.Controls.Add(this.uiButton2);
@@ -125,25 +125,26 @@
             this.uiBtnFuncionario.UseVisualStyleBackColor = false;
             this.uiBtnFuncionario.Click += new System.EventHandler(this.uiBtnFuncionario_Click);
             // 
-            // uiButton4
+            // uiBtnAcesso
             // 
-            this.uiButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton4.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton4.FlatAppearance.BorderSize = 0;
-            this.uiButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton4.Location = new System.Drawing.Point(169, 3);
-            this.uiButton4.Name = "uiButton4";
-            this.uiButton4.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton4.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton4.Size = new System.Drawing.Size(160, 84);
-            this.uiButton4.TabIndex = 12;
-            this.uiButton4.Text = "ACESSO";
-            this.uiButton4.TextColor = System.Drawing.Color.White;
-            this.uiButton4.UseVisualStyleBackColor = false;
+            this.uiBtnAcesso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnAcesso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnAcesso.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiBtnAcesso.FlatAppearance.BorderSize = 0;
+            this.uiBtnAcesso.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.uiBtnAcesso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uiBtnAcesso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiBtnAcesso.Location = new System.Drawing.Point(169, 3);
+            this.uiBtnAcesso.Name = "uiBtnAcesso";
+            this.uiBtnAcesso.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnAcesso.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiBtnAcesso.OnHoverTextColor = System.Drawing.Color.White;
+            this.uiBtnAcesso.Size = new System.Drawing.Size(160, 84);
+            this.uiBtnAcesso.TabIndex = 12;
+            this.uiBtnAcesso.Text = "ACESSO";
+            this.uiBtnAcesso.TextColor = System.Drawing.Color.White;
+            this.uiBtnAcesso.UseVisualStyleBackColor = false;
+            this.uiBtnAcesso.Click += new System.EventHandler(this.uiBtnAcesso_Click);
             // 
             // uiButton1
             // 
@@ -209,7 +210,7 @@
             // 
             this.uiPanelConteudo.Location = new System.Drawing.Point(0, 249);
             this.uiPanelConteudo.Name = "uiPanelConteudo";
-            this.uiPanelConteudo.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.uiPanelConteudo.PanelColor = System.Drawing.Color.White;
             this.uiPanelConteudo.PanelRadius = 5;
             this.uiPanelConteudo.Size = new System.Drawing.Size(834, 319);
             this.uiPanelConteudo.TabIndex = 11;
@@ -243,7 +244,7 @@
         private uiCSB.Component.uiButton uiButton1;
         private uiCSB.Component.uiButton uiButton2;
         private uiCSB.Component.uiButton uiButton3;
-        private uiCSB.Component.uiButton uiButton4;
+        private uiCSB.Component.uiButton uiBtnAcesso;
         private uiCSB.Component.uiPanel uiPanelConteudo;
     }
 }
