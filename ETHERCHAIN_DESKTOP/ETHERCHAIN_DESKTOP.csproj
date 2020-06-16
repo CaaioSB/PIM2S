@@ -114,6 +114,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDesktop.cs" />
+    <Compile Include="Control\Executive\uctAcesso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Executive\uctAcesso.Designer.cs">
+      <DependentUpon>uctAcesso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\Executive\uctBackup.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilCorreios.cs" />
+    <Compile Include="UtilCreatePanel.cs" />
+    <EmbeddedResource Include="Control\Executive\uctAcesso.resx">
+      <DependentUpon>uctAcesso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Executive\uctBackup.resx">
       <DependentUpon>uctBackup.cs</DependentUpon>
     </EmbeddedResource>
