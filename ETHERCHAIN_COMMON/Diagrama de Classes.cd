@@ -1,90 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ETHERCHAIN_COMMON.Wallet">
+  <Class Name="Etherchain.Common.Wallet">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAABAAAAAQAAQAAEBEAQJAQAAiAAAABIBAgAwEAAAQA=</HashCode>
       <FileName>Wallet.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.Employee">
+  <Class Name="Etherchain.Common.Employee">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAEAGUICgCAAAACIAFEggACAKAIAAAACZgxggIgiAAk=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.Founds">
+  <Class Name="Etherchain.Common.Founds">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAQwAAAAAAAAAAAABoAgBAAgAAAEBABAgAAIAABRA=</HashCode>
       <FileName>Founds.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.QRCode">
+  <Class Name="Etherchain.Common.QRCode">
     <Position X="2.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAABAAAAAAAAAAAAAAAAAAABAgACIAAAAA=</HashCode>
       <FileName>QRCode.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.Transaction">
+  <Class Name="Etherchain.Common.Transaction">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAJAQAARAAAQAQQCEAAACACAAgAAAAQABAhAAAAAAAQ=</HashCode>
       <FileName>Transaction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.TransactionIn">
+  <Class Name="Etherchain.Common.TransactionIn">
     <Position X="7.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAARAAAAAAAAAAAACAAAAgAAAAACBAgAAMAAAAQ=</HashCode>
       <FileName>TransactionIn.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.TransactionOut">
+  <Class Name="Etherchain.Common.TransactionOut">
     <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAEAAEABAAAAAAAAAAAACACAAgIAgAACBAgAAIAAAAA=</HashCode>
       <FileName>TransactionOut.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.CustomerJuridico">
+  <Class Name="Etherchain.Common.CustomerJuridico">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAACAAAAAAAABABAEAAIAAAABAgAAAAAAAA=</HashCode>
       <FileName>CustomerJuridico.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.Access">
+  <Class Name="Etherchain.Common.Access">
     <Position X="11" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAARAEBAIAAAAAABAAIEAAIAAAAABgBAAQAACAACA=</HashCode>
       <FileName>Access.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.Archive">
+  <Class Name="Etherchain.Common.Archive">
     <Position X="4" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAQQAAAAA=</HashCode>
       <FileName>Archive.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.CryptoCurency">
+  <Class Name="Etherchain.Common.CryptoCurency">
     <Position X="9.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIgAAAAAwAAAEAAAAAARCCAAAAAAABAgAAYAAAAA=</HashCode>
       <FileName>CryptoCurency.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.Customer">
+  <Class Name="Etherchain.Common.Customer">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABCAACgCAAAAAIAFAgAAAQAAIACBACAgBggAgiAAE=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ETHERCHAIN_COMMON.CustomerFisico">
+  <Class Name="Etherchain.Common.CustomerFisico">
     <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAEAEUIAAAAAAACAAAEAAACAKAIAAAAARAwAAAAAAAg=</HashCode>
