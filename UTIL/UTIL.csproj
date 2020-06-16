@@ -56,12 +56,19 @@
     <Compile Include="Hash\Hash.cs" />
     <Compile Include="Hash\HashMD5.cs" />
     <Compile Include="Hash\HashNone.cs" />
+    <Compile Include="UtilImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilCallback.cs" />
     <Compile Include="UtilChangeForm.cs" />
     <Compile Include="UtilChangePanel.cs" />
     <Compile Include="UtilRandom.cs" />
     <Compile Include="UtilTemplate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\uiCSB\uiCSB.csproj">
+      <Project>{3AA38F95-836E-456B-AC6D-856F88516056}</Project>
+      <Name>uiCSB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
