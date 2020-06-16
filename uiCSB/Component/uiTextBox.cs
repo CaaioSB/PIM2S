@@ -7,6 +7,23 @@ namespace uiCSB.Component
 {
     public class uiTextBox : TextBox
     {
+        public enum Validate
+        {
+            None,
+            NotNull,
+            Int,
+            Email,
+            CPF,
+            Gender,
+            Date,
+            MobileNumber,
+            Postcode
+        }
+
+        private Validate _validadeType;
+
+        public Validate ValidadeType { get => _validadeType; set => _validadeType = value; }
+
         public uiTextBox()
         {
             BorderStyle = BorderStyle.None;
@@ -16,7 +33,8 @@ namespace uiCSB.Component
         {
             base.OnPaint(e);
             OnCreateControl();
-            Invalidate();}
+            Invalidate();
+        }
 
         protected override void OnCreateControl()
         {
