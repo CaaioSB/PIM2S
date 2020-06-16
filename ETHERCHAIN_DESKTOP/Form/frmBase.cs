@@ -11,6 +11,7 @@ using System.Net;
 using caiosb.Util;
 using Etherchain.Desktop;
 using Etherchain.Common;
+using caiosb.Util.Data;
 
 namespace Etherchain.Formularios
 {
@@ -40,6 +41,12 @@ namespace Etherchain.Formularios
             UtilChangePanel.MudarConteudo(pnlConteudo, uctBase);
 
             lblNome.Text = AppDesktop.ActualEmployee.FirstName + " " + AppDesktop.ActualEmployee.LastName;
+            picProfilePhoto.Image = UtilImage.ByteToImage(AppDesktop.ActualArchive.Blob);
+        }
+
+        private void frmBase_Load(object sender, EventArgs e)
+        {
+            AccessLevel();
         }
 
         private void uiMinimize_Click(object sender, EventArgs e)
@@ -55,10 +62,40 @@ namespace Etherchain.Formularios
             }.ObterPorId();
 
 
-            if (access.AccessLevel > 1)
+            switch (access.PositionId)
             {
-                btnExecutive.Visible = false;
-                btnBackup.Visible = false;
+                case 1:
+                    // Administrador (todas funções ativadas)
+                    btnClientes.Visible = true;
+                    btnSupport.Visible = true;
+                    btnConfig.Visible = true;
+                    btnBackup.Visible = true;
+                    btnExecutive.Visible = true;
+                    break;
+                case 2:
+                    // Executive (apenas o módulo executivo ativado)
+                    btnClientes.Visible = false;
+                    btnSupport.Visible = false;
+                    btnConfig.Visible = true;
+                    btnBackup.Visible = true;
+                    btnExecutive.Visible = true;
+                    break;
+                case 3:
+                    // Corretor (apenas módulos relacionado a controle de clientes ativados).
+                    btnClientes.Visible = true;
+                    btnSupport.Visible = false;
+                    btnConfig.Visible = true;
+                    btnBackup.Visible = false;
+                    btnExecutive.Visible = false;
+                    break;
+                case 4:
+                    // Suporte (apenas o módulo suporte e controle de clientes ativado)
+                    btnClientes.Visible = true;
+                    btnSupport.Visible = true;
+                    btnConfig.Visible = true;
+                    btnBackup.Visible = false;
+                    btnExecutive.Visible = false;
+                    break;
             }
         }
 

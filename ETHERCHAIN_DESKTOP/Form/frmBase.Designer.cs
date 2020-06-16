@@ -71,7 +71,7 @@
             this.pnlBackground.Controls.Add(this.iconPictureBox2);
             this.pnlBackground.Location = new System.Drawing.Point(83, 3);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(867, 651);
+            this.pnlBackground.Size = new System.Drawing.Size(864, 644);
             this.pnlBackground.TabIndex = 0;
             this.pnlBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
@@ -85,7 +85,7 @@
             this.uiMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.uiMinimize.IconColor = System.Drawing.Color.White;
             this.uiMinimize.IconSize = 27;
-            this.uiMinimize.Location = new System.Drawing.Point(825, 12);
+            this.uiMinimize.Location = new System.Drawing.Point(824, 9);
             this.uiMinimize.Name = "uiMinimize";
             this.uiMinimize.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
             this.uiMinimize.Rounded = true;
@@ -170,7 +170,7 @@
             this.iconPicture2.IconChar = FontAwesome.Sharp.IconChar.Bell;
             this.iconPicture2.IconColor = System.Drawing.Color.White;
             this.iconPicture2.IconSize = 27;
-            this.iconPicture2.Location = new System.Drawing.Point(789, 12);
+            this.iconPicture2.Location = new System.Drawing.Point(788, 9);
             this.iconPicture2.Name = "iconPicture2";
             this.iconPicture2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
             this.iconPicture2.Rounded = true;
@@ -209,7 +209,6 @@
             // 
             // picProfilePhoto
             // 
-            this.picProfilePhoto.Image = global::Etherchain.Desktop.Properties.Resources.male;
             this.picProfilePhoto.Location = new System.Drawing.Point(11, 12);
             this.picProfilePhoto.Name = "picProfilePhoto";
             this.picProfilePhoto.Size = new System.Drawing.Size(60, 60);
@@ -296,7 +295,7 @@
             this.btnExit.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.IconSize = 82;
+            this.btnExit.IconSize = 40;
             this.btnExit.Location = new System.Drawing.Point(0, 573);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
@@ -346,6 +345,7 @@
             this.Name = "frmBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmBase_Load);
             this.pnlBackground.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiMinimize)).EndInit();
             this.pnlConteudo.ResumeLayout(false);
