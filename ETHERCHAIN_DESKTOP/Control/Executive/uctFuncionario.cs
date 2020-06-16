@@ -19,6 +19,7 @@ using System.Net.Http;
 using System.Web;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using caiosb.Util;
 
 namespace Etherchain.Desktop.Control.Executive
 {
@@ -28,6 +29,9 @@ namespace Etherchain.Desktop.Control.Executive
         {
             InitializeComponent();
         }
+
+        // Variável global do controle para indentificar se a imagem do usuário foi alterada.
+        private bool newImage = false;
 
         private void uctFuncionario_Load(object sender, EventArgs e)
         {
@@ -42,7 +46,7 @@ namespace Etherchain.Desktop.Control.Executive
 
             for (int i = 0; i < employee.Count; i++)
             {
-                CreateUserPanel(employee[i], uiFlowPanel);
+                UtilCreatePanel.CreateUserPanel(employee[i], uiFlowPanel, Employee_Click);
 
             }
         }
@@ -60,7 +64,7 @@ namespace Etherchain.Desktop.Control.Executive
             PictureBox pictureBox = new PictureBox();
             pictureBox.Name = "picEmployee" + employee.EmployeeId;
             pictureBox.Size = new Size(77, 77);
-            pictureBox.Image = Properties.Resources.male;
+            pictureBox.Image = UtilImage.ByteToImage(new Archive { ArchiveId = employee.ArchiveId }.ObterPorCod().Blob);
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox.Tag = employee.EmployeeId;
             pictureBox.BackColor = Color.Transparent;
@@ -100,62 +104,7 @@ namespace Etherchain.Desktop.Control.Executive
             flowLayoutPanel.Controls.Add(uiPanel);
             //flowLayoutPanel.Controls.Add(uiPanelEmployee);
         }
-        private void CreateUserPanel(List<Employee> employeeList, FlowLayoutPanel flowLayoutPanel)
-        {
-            foreach (var employee in employeeList)
-            {
-                uiPanel uiPanel = new uiPanel();
-                uiPanel.Name = "pnlEmployee" + employee.EmployeeId;
-                uiPanel.Size = new Size(221, 86);
-                uiPanel.PanelRadius = 5;
-                uiPanel.Tag = employee.EmployeeId;
-                uiPanel.BackColor = Color.FromArgb(215, 223, 255);
-                uiPanel.Click += new EventHandler(Employee_Click);
-
-                PictureBox pictureBox = new PictureBox();
-                pictureBox.Name = "picEmployee" + employee.EmployeeId;
-                pictureBox.Size = new Size(77, 77);
-                pictureBox.Image = Properties.Resources.male;
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                pictureBox.Tag = employee.EmployeeId;
-                pictureBox.BackColor = Color.Transparent;
-                uiPanel.Controls.Add(pictureBox);
-                pictureBox.Location = new Point(4, 4);
-                pictureBox.Click += new EventHandler(Employee_Click);
-
-                Label label = new Label();
-                label.Name = "lblEmployee" + employee.EmployeeId;
-                label.Font = new Font("Gadugi", 14, FontStyle.Bold);
-                label.ForeColor = Color.FromArgb(80, 63, 153);
-                label.Tag = employee.EmployeeId;
-                label.BackColor = Color.FromArgb(242, 245, 255);
-                label.Text = employee.FirstName + " " + employee.LastName;
-                label.AutoEllipsis = true;
-                label.AutoSize = false;
-                label.Size = new Size(133, 21);
-                uiPanel.Controls.Add(label);
-                label.Location = new Point(85, 6);
-                label.Click += new EventHandler(Employee_Click);
-
-                Label labelCPF = new Label();
-                labelCPF.Name = "lblEmployeeCPF" + employee.EmployeeId;
-                labelCPF.Font = new Font("Gadugi", 8);
-                labelCPF.ForeColor = Color.FromArgb(180, 182, 194);
-                labelCPF.BackColor = Color.FromArgb(242, 245, 255);
-                labelCPF.Text = UtilConvert.ToString(employee.CPF);
-                labelCPF.AutoEllipsis = true;
-                labelCPF.Tag = employee.EmployeeId;
-                labelCPF.AutoSize = false;
-                labelCPF.Size = new Size(131, 14);
-                uiPanel.Controls.Add(labelCPF);
-                labelCPF.Location = new Point(87, 27);
-                labelCPF.Click += new EventHandler(Employee_Click);
-
-
-                flowLayoutPanel.Controls.Add(uiPanel);
-                //flowLayoutPanel.Controls.Add(uiPanelEmployee);
-            }
-        }
+        
 
         private void uiTxtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -163,9 +112,10 @@ namespace Etherchain.Desktop.Control.Executive
             {
                 uiFlowPanel.Controls.Clear();
 
-                Employee employee = new Employee { CPF = uiTxtSearch.Text }.ObterPorCPF();
+                Employee employee = new Employee { CPF = uiTxtSearch.Text }.ObterInicialCPF();
 
-                CreateUserPanel(employee, uiFlowPanel);
+                UtilCreatePanel.CreateUserPanel(employee, uiFlowPanel, Employee_Click);
+                //CreateUserPanel(employee, uiFlowPanel);
             }
             catch (NullReferenceException)
             {
@@ -176,7 +126,7 @@ namespace Etherchain.Desktop.Control.Executive
                 else if (uiTxtSearch.TextLength == 0)
                 {
                     List<Employee> employeeList = new Employee { }.ObterTodos();
-                    CreateUserPanel(employeeList, uiFlowPanel);
+                    UtilCreatePanel.CreateUserPanel(employeeList, uiFlowPanel, Employee_Click);
                 }
             }
             catch (Exception ex)
@@ -202,6 +152,8 @@ namespace Etherchain.Desktop.Control.Executive
                 PictureBox pictureBox = sender as PictureBox;
                 PreencheDadosEmployee(new Employee { EmployeeId = UtilConvert.ToInt(pictureBox.Tag) }.ObterPorId());
             }
+
+            newImage = false;
         }
 
         public void PreencheDadosEmployee(Employee employee)
@@ -210,6 +162,7 @@ namespace Etherchain.Desktop.Control.Executive
             //lblWords.Text = UtilConvert.ToString(employee.Words);
             //lblWordsLanguage.Text = UtilConvert.ToString(employee.WordsLanguage);
             lblArchiveId.Text = UtilConvert.ToString(employee.ArchiveId);
+            picProfilePhoto.Image = UtilImage.ByteToImage(new Archive { ArchiveId = employee.ArchiveId }.ObterPorCod().Blob);
             uiTxtPNome.Text = UtilConvert.ToString(employee.FirstName);
             uiTxtUNome.Text = UtilConvert.ToString(employee.LastName);
             uiTxtDataNasc.Text = UtilConvert.ToString(employee.DateBirth.ToString("dd/MM/yyyy"));
@@ -218,13 +171,15 @@ namespace Etherchain.Desktop.Control.Executive
             uiTxtRG.Text = UtilConvert.ToString(employee.RG);
             uiTxtEmail.Text = UtilConvert.ToString(employee.Email);
             uiTxtLogradouro.Text = UtilConvert.ToString(employee.StreetLine);
-            uiTxtNumero.Text = UtilConvert.ToString("0");
-            uiTxtBairro.Text = UtilConvert.ToString("");
+            //uiPanelEndereco.Text = UtilConvert.ToString("0");
+            uiTxtBairro.Text = UtilConvert.ToString(employee.Neighborhood);
             uiTxtPais.Text = UtilConvert.ToString(employee.Country);
             uiTxtCidade.Text = UtilConvert.ToString(employee.City);
             uiTxtEstado.Text = UtilConvert.ToString(employee.Region);
+            uiTxtNumero.Text = UtilConvert.ToString(employee.Number);
             uiTxtCep.Text = UtilConvert.ToString(employee.PostCode);
             uiTxtTelCel.Text = UtilConvert.ToString(employee.MobileNumber);
+            uiTxtTelFixo.Text = UtilConvert.ToString(employee.PhoneNumber);
 
             btnCriar.Visible = false;
             btnCancelar.Visible = true;
@@ -242,28 +197,66 @@ namespace Etherchain.Desktop.Control.Executive
         {
             try
             {
-                new Employee
+                if (CamposValidos(uiPanelDados))
                 {
-                    EmployeeId = UtilConvert.ToInt(lblEmployeeId.Text),
-                    //Words = UtilConvert.ToString(lblWords.Text),
-                    //WordsLanguage = UtilConvert.ToString(lblWordsLanguage.Text),
-                    FirstName = UtilConvert.ToString(uiTxtPNome.Text),
-                    LastName = UtilConvert.ToString(uiTxtUNome.Text),
-                    ArchiveId = UtilConvert.ToInt(lblArchiveId.Text),
-                    DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
-                    Gender = UtilConvert.ToChar(uiTxtSexo.Text),
-                    CPF = uiTxtCPF.Text,
-                    RG = uiTxtRG.Text,
-                    Email = uiTxtEmail.Text,
-                    StreetLine = uiTxtLogradouro.Text,
-                    //uiTxtNumero.Text,
-                    //uiTxtBairro.Text,
-                    Country = uiTxtPais.Text,
-                    City = uiTxtCidade.Text,
-                    Region = uiTxtEstado.Text,
-                    PostCode = uiTxtCep.Text,
-                    MobileNumber = uiTxtTelCel.Text
-                }.AlterarPorId();
+
+                    if (newImage)
+                    {
+                        new Employee
+                        {
+                            ArchiveId = new Archive { Blob = UtilImage.ImageToByte(picProfilePhoto.Image) }.Gravar(),
+                            EmployeeId = UtilConvert.ToInt(lblEmployeeId.Text),
+                            //Words = UtilConvert.ToString(lblWords.Text),
+                            //WordsLanguage = UtilConvert.ToString(lblWordsLanguage.Text),
+                            FirstName = UtilConvert.ToString(uiTxtPNome.Text),
+                            LastName = UtilConvert.ToString(uiTxtUNome.Text),
+                            DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
+                            Gender = UtilConvert.ToChar(uiTxtSexo.Text),
+                            CPF = uiTxtCPF.Text,
+                            RG = uiTxtRG.Text,
+                            Email = uiTxtEmail.Text,
+                            StreetLine = uiTxtLogradouro.Text,
+                            //uiTxtNumero.Text,
+                            //uiTxtBairro.Text,
+                            Country = uiTxtPais.Text,
+                            City = uiTxtCidade.Text,
+                            Neighborhood = uiTxtBairro.Text,
+                            Region = uiTxtEstado.Text,
+                            Number = uiTxtNumero.Text,
+                            PostCode = uiTxtCep.Text,
+                            MobileNumber = uiTxtTelCel.Text,
+                            PhoneNumber = uiTxtTelFixo.Text
+                        }.AlterarPorId();
+                    }
+                    else
+                    {
+                        new Employee
+                        {
+                            ArchiveId = UtilConvert.ToInt(lblArchiveId.Text),
+                            EmployeeId = UtilConvert.ToInt(lblEmployeeId.Text),
+                            //Words = UtilConvert.ToString(lblWords.Text),
+                            //WordsLanguage = UtilConvert.ToString(lblWordsLanguage.Text),
+                            FirstName = UtilConvert.ToString(uiTxtPNome.Text),
+                            LastName = UtilConvert.ToString(uiTxtUNome.Text),
+                            DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
+                            Gender = UtilConvert.ToChar(uiTxtSexo.Text),
+                            CPF = uiTxtCPF.Text,
+                            RG = uiTxtRG.Text,
+                            Email = uiTxtEmail.Text,
+                            StreetLine = uiTxtLogradouro.Text,
+                            //uiTxtNumero.Text,
+                            //uiTxtBairro.Text,
+                            Country = uiTxtPais.Text,
+                            City = uiTxtCidade.Text,
+                            Neighborhood = uiTxtBairro.Text,
+                            Region = uiTxtEstado.Text,
+                            Number = uiTxtNumero.Text,
+                            PostCode = uiTxtCep.Text,
+                            MobileNumber = uiTxtTelCel.Text,
+                            PhoneNumber = uiTxtTelFixo.Text
+                        }.AlterarPorId();
+                    }
+                }
             }
             catch (NullReferenceException)
             {
@@ -311,27 +304,63 @@ namespace Etherchain.Desktop.Control.Executive
         {
             try
             {
-                new Employee
+                if (CamposValidos(uiPanelDados))
                 {
-                    Words = UtilConvert.ToString(RandomWordsAsync(12)),
-                    WordsLanguage = UtilConvert.ToString("en-US"),
-                    FirstName = UtilConvert.ToString(uiTxtPNome.Text),
-                    LastName = UtilConvert.ToString(uiTxtUNome.Text),
-                    ArchiveId = 1,
-                    DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
-                    Gender = UtilConvert.ToChar(uiTxtSexo.Text),
-                    CPF = uiTxtCPF.Text,
-                    RG = uiTxtRG.Text,
-                    Email = uiTxtEmail.Text,
-                    StreetLine = uiTxtLogradouro.Text,
-                    //uiTxtNumero.Text,
-                    //uiTxtBairro.Text,
-                    Country = uiTxtPais.Text,
-                    City = uiTxtCidade.Text,
-                    Region = uiTxtEstado.Text,
-                    PostCode = uiTxtCep.Text,
-                    MobileNumber = uiTxtTelCel.Text
-                }.Gravar();
+                    if (newImage)
+                    {
+                        new Employee
+                        {
+                            ArchiveId = new Archive { Blob = UtilImage.ImageToByte(picProfilePhoto.Image) }.Gravar(),
+                            Words = UtilConvert.ToString(RandomWordsAsync(12)),
+                            WordsLanguage = UtilConvert.ToString("en-US"),
+                            FirstName = UtilConvert.ToString(uiTxtPNome.Text),
+                            LastName = UtilConvert.ToString(uiTxtUNome.Text),
+                            DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
+                            Gender = UtilConvert.ToChar(uiTxtSexo.Text),
+                            CPF = uiTxtCPF.Text,
+                            RG = uiTxtRG.Text,
+                            Email = uiTxtEmail.Text,
+                            StreetLine = uiTxtLogradouro.Text,
+                            //uiTxtNumero.Text,
+                            //uiTxtBairro.Text,
+                            Country = uiTxtPais.Text,
+                            City = uiTxtCidade.Text,
+                            Neighborhood = uiTxtBairro.Text,
+                            Region = uiTxtEstado.Text,
+                            Number = uiTxtNumero.Text,
+                            PostCode = uiTxtCep.Text,
+                            MobileNumber = uiTxtTelCel.Text,
+                            PhoneNumber = uiTxtTelFixo.Text
+                        }.Gravar();
+                    }
+                    else
+                    {
+                        new Employee
+                        {
+                            ArchiveId = UtilConvert.ToInt(lblArchiveId.Text),
+                            Words = UtilConvert.ToString(RandomWordsAsync(12)),
+                            WordsLanguage = UtilConvert.ToString("en-US"),
+                            FirstName = UtilConvert.ToString(uiTxtPNome.Text),
+                            LastName = UtilConvert.ToString(uiTxtUNome.Text),
+                            DateBirth = UtilConvert.ToDateTime(uiTxtDataNasc.Text),
+                            Gender = UtilConvert.ToChar(uiTxtSexo.Text),
+                            CPF = uiTxtCPF.Text,
+                            RG = uiTxtRG.Text,
+                            Email = uiTxtEmail.Text,
+                            StreetLine = uiTxtLogradouro.Text,
+                            //uiTxtNumero.Text,
+                            //uiTxtBairro.Text,
+                            Country = uiTxtPais.Text,
+                            City = uiTxtCidade.Text,
+                            Neighborhood = uiTxtBairro.Text,
+                            Region = uiTxtEstado.Text,
+                            Number = uiTxtNumero.Text,
+                            PostCode = uiTxtCep.Text,
+                            MobileNumber = uiTxtTelCel.Text,
+                            PhoneNumber = uiTxtTelFixo.Text
+                        }.Gravar();
+                    }
+                }
             }
             catch (NullReferenceException)
             {
@@ -340,30 +369,128 @@ namespace Etherchain.Desktop.Control.Executive
             catch (Exception ex)
             {
                 new Alert(ex.Message, Type.Warning);
-                MessageBox.Show(ex.Message);
             }
         }
 
-        private bool Validar(Employee employee)
+        private bool CamposValidos(Panel uiPanel)
         {
-            StringBuilder validador = new StringBuilder();
+            bool formIsValid = true;
 
-            if (!UtilValidar.validarEmail(employee.Email))
+            foreach (System.Windows.Forms.Control control in uiPanel.Controls)
             {
-                validador.Append("false ");
+                if (control is uiTextBox)
+                {
+                    uiTextBox uiTextBox = (uiTextBox)control;
+
+                    if (uiTextBox.ValidadeType != uiTextBox.Validate.None)
+                    {
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Date)
+                        {
+                            if (!UtilValidar.validarData(uiTextBox.Text))
+                            {
+                                //new Alert("Insira uma data válida (dd/MM/aaaa).", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.CPF)
+                        {
+                            if (!UtilValidar.validarCPF(uiTextBox.Text) || String.IsNullOrEmpty(uiTextBox.Text))
+                            {
+                                //new Alert("Insira um CPF válido.", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Email)
+                        {
+                            if (!UtilValidar.validarEmail(uiTextBox.Text))
+                            {
+                                //new Alert("Insira um e-mail válido.", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Gender)
+                        {
+                            if (!UtilValidar.validarGenero(Convert.ToChar(uiTextBox.Text)))
+                            {
+                                //new Alert("Selecione um gênero.", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Postcode)
+                        {
+                            if (!UtilValidar.validarCEP(uiTextBox.Text))
+                            {
+                                //new Alert("Selecione um gênero.", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.MobileNumber)
+                        {
+                            if (!UtilValidar.validarCelular(uiTextBox.Text))
+                            {
+                                //new Alert("Insira um telefone celular válido.", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+
+                        if (uiTextBox.ValidadeType == uiTextBox.Validate.NotNull)
+                        {
+                            if (UtilValidar.vazio(uiTextBox.Text))
+                            {
+                                //new Alert("Insira um telefone celular válido.", Type.Warning);
+                                uiTextBox.BackColor = Color.IndianRed;
+                                formIsValid = false;
+                            }
+                            else
+                            {
+                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
+                            }
+                        }
+                    }
+                }
             }
 
-            if (!UtilValidar.validarCPF(employee.CPF))
+            if (!formIsValid)
             {
-                validador.Append("false ");
+                new Alert("Todos os campos destacados na cor VERMELHA estão inválidos.", Type.Warning);
             }
 
-            if (!UtilValidar.validarGenero(employee.Gender))
-            {
-                validador.Append("false ");
-            }
-
-            return false;
+            return formIsValid;
         }
 
         private void lblGenero_Click(object sender, EventArgs e)
@@ -373,6 +500,26 @@ namespace Etherchain.Desktop.Control.Executive
             lblMasculino.ForeColor = Color.White;
             label.ForeColor = Color.FromArgb(72, 84, 179);
             uiTxtSexo.Text = label.Text;
+        }
+
+        private void uiBtnImage_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Escolha a imagem de perfil";
+                dlg.Filter = "(*.png)|*.png";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    picProfilePhoto.Image = new Bitmap(dlg.FileName);
+                    newImage = true;
+                }
+            }
+        }
+
+        private void uiTxtCep_Leave(object sender, EventArgs e)
+        {
+            Etherchain.Desktop.UtilCorreios.definirCEP(uiTxtCep, uiTxtLogradouro, uiTxtBairro, uiTxtCidade, uiTxtEstado, uiTxtNumero, uiTxtTelFixo);
         }
     }
 }
