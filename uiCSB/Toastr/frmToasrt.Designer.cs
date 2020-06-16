@@ -39,10 +39,12 @@
             // 
             // lblMsg
             // 
+            this.lblMsg.AutoSize = true;
             this.lblMsg.ForeColor = System.Drawing.Color.White;
-            this.lblMsg.Location = new System.Drawing.Point(65, 13);
+            this.lblMsg.Location = new System.Drawing.Point(65, 11);
+            this.lblMsg.MaximumSize = new System.Drawing.Size(225, 0);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(227, 53);
+            this.lblMsg.Size = new System.Drawing.Size(116, 21);
             this.lblMsg.TabIndex = 0;
             this.lblMsg.Text = "Message Text";
             // 
@@ -88,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

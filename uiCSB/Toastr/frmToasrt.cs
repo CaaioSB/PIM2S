@@ -38,12 +38,12 @@ namespace uiCSB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            switch(this.action)
+            switch (this.action)
             {
                 case enmAction.wait:
                     timer1.Interval = 5000;
@@ -98,7 +98,7 @@ namespace uiCSB
                 {
                     this.Name = fname;
                     this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 15;
-                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - 5 * i;
+                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - lblMsg.Height * i;
                     this.Location = new Point(this.x, this.y);
                     break;
 
@@ -107,7 +107,7 @@ namespace uiCSB
             }
             this.x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
 
-            switch(type)
+            switch (type)
             {
                 case enmType.Success:
                     this.pictureBox1.Image = Resources.success;
@@ -129,6 +129,8 @@ namespace uiCSB
 
 
             this.lblMsg.Text = msg;
+
+            this.Height = lblMsg.Height + 25;
 
             this.Show();
             this.action = enmAction.start;
