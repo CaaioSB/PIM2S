@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Caelum.Stella.CSharp, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UTIL\bin\Debug\Caelum.Stella.CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,10 +51,12 @@
     <Compile Include="Archive.cs" />
     <Compile Include="CryptoCurency.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Endereco.cs" />
     <Compile Include="Founds.cs" />
     <Compile Include="CustomerJuridico.cs" />
     <Compile Include="CustomerFisico.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QRCode.cs" />
     <Compile Include="Transaction.cs" />
