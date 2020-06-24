@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using caiosb.Util;
+using Etherchain.Control.Settings;
 
 namespace Etherchain.Control
 {
@@ -20,12 +21,12 @@ namespace Etherchain.Control
 
         private void uiBtnAcessibilidade_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(uiPnlConteudo, uctAcessibilidade);
+            UtilChangePanel.MudarConteudo(uiPnlConteudo, new uctAcessibilidade());
         }
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(uiPnlConteudo, uctChangeKey);
+            UtilChangePanel.MudarConteudo(uiPnlConteudo, new uctChangeKey());
         }
     }
 }
