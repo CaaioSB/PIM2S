@@ -1,15 +1,17 @@
-﻿using System;
+﻿using caiosb.SqlMaster.Command;
+using caiosb.Util.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Etherchain.Common
 {
-    class Customer
+    public class Customer
     {
         private int _customerId;
-        private int _walletId;
         private string _email;
         private string _words;
         private string _wordsLanguage;
@@ -21,7 +23,6 @@ namespace Etherchain.Common
         private string _mobileNumber;
 
         public int CustomerId { get => _customerId; set => _customerId = value; }
-        public int WalletId { get => _walletId; set => _walletId = value; }
         public string Email { get => _email; set => _email = value; }
         public string Words { get => _words; set => _words = value; }
         public string WordsLanguage { get => _wordsLanguage; set => _wordsLanguage = value; }
