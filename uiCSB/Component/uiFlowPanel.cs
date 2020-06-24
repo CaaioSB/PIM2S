@@ -10,6 +10,7 @@ namespace uiCSB.Component
         public uiFlowPanel()
         {
             DoubleBuffered = true;
+            BackColor = Color.Transparent;
         }
 
         protected override void OnPaint(PaintEventArgs e)
