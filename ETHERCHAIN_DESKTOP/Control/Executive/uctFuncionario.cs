@@ -197,7 +197,7 @@ namespace Etherchain.Desktop.Control.Executive
         {
             try
             {
-                if (CamposValidos(uiPanelDados))
+                if (UtilValidar.CamposValidos(uiPanelDados))
                 {
 
                     if (newImage)
@@ -304,7 +304,7 @@ namespace Etherchain.Desktop.Control.Executive
         {
             try
             {
-                if (CamposValidos(uiPanelDados))
+                if (UtilValidar.CamposValidos(uiPanelDados))
                 {
                     if (newImage)
                     {
@@ -370,127 +370,6 @@ namespace Etherchain.Desktop.Control.Executive
             {
                 new Alert(ex.Message, Type.Warning);
             }
-        }
-
-        private bool CamposValidos(Panel uiPanel)
-        {
-            bool formIsValid = true;
-
-            foreach (System.Windows.Forms.Control control in uiPanel.Controls)
-            {
-                if (control is uiTextBox)
-                {
-                    uiTextBox uiTextBox = (uiTextBox)control;
-
-                    if (uiTextBox.ValidadeType != uiTextBox.Validate.None)
-                    {
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Date)
-                        {
-                            if (!UtilValidar.validarData(uiTextBox.Text))
-                            {
-                                //new Alert("Insira uma data válida (dd/MM/aaaa).", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.CPF)
-                        {
-                            if (!UtilValidar.validarCPF(uiTextBox.Text) || String.IsNullOrEmpty(uiTextBox.Text))
-                            {
-                                //new Alert("Insira um CPF válido.", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Email)
-                        {
-                            if (!UtilValidar.validarEmail(uiTextBox.Text))
-                            {
-                                //new Alert("Insira um e-mail válido.", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Gender)
-                        {
-                            if (!UtilValidar.validarGenero(Convert.ToChar(uiTextBox.Text)))
-                            {
-                                //new Alert("Selecione um gênero.", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.Postcode)
-                        {
-                            if (!UtilValidar.validarCEP(uiTextBox.Text))
-                            {
-                                //new Alert("Selecione um gênero.", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.MobileNumber)
-                        {
-                            if (!UtilValidar.validarCelular(uiTextBox.Text))
-                            {
-                                //new Alert("Insira um telefone celular válido.", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-
-                        if (uiTextBox.ValidadeType == uiTextBox.Validate.NotNull)
-                        {
-                            if (UtilValidar.vazio(uiTextBox.Text))
-                            {
-                                //new Alert("Insira um telefone celular válido.", Type.Warning);
-                                uiTextBox.BackColor = Color.IndianRed;
-                                formIsValid = false;
-                            }
-                            else
-                            {
-                                uiTextBox.BackColor = Color.FromArgb(65, 50, 122);
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (!formIsValid)
-            {
-                new Alert("Todos os campos destacados na cor VERMELHA estão inválidos.", Type.Warning);
-            }
-
-            return formIsValid;
         }
 
         private void lblGenero_Click(object sender, EventArgs e)

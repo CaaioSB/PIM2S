@@ -39,7 +39,6 @@
             this.lblArchiveId = new System.Windows.Forms.Label();
             this.lblEmployeeId = new System.Windows.Forms.Label();
             this.uiPanel2 = new uiCSB.Component.uiPanel();
-            this.picProfilePhoto = new System.Windows.Forms.PictureBox();
             this.btnAtualizar = new uiCSB.Component.uiButton();
             this.btnCriar = new uiCSB.Component.uiButton();
             this.btnCancelar = new uiCSB.Component.uiButton();
@@ -78,6 +77,7 @@
             this.uiTxtCPF = new uiCSB.Component.uiTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.uiTxtPNome = new uiCSB.Component.uiTextBox();
+            this.picProfilePhoto = new System.Windows.Forms.PictureBox();
             this.uiPanel1.SuspendLayout();
             this.uiPanelPesquisa.SuspendLayout();
             this.uiFlowPanel2.SuspendLayout();
@@ -248,16 +248,6 @@
             this.uiPanel2.PanelRadius = 10;
             this.uiPanel2.Size = new System.Drawing.Size(254, 79);
             this.uiPanel2.TabIndex = 10;
-            // 
-            // picProfilePhoto
-            // 
-            this.picProfilePhoto.Image = global::Etherchain.Desktop.Properties.Resources.male;
-            this.picProfilePhoto.Location = new System.Drawing.Point(10, 7);
-            this.picProfilePhoto.Name = "picProfilePhoto";
-            this.picProfilePhoto.Size = new System.Drawing.Size(67, 65);
-            this.picProfilePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProfilePhoto.TabIndex = 24;
-            this.picProfilePhoto.TabStop = false;
             // 
             // btnAtualizar
             // 
@@ -780,6 +770,16 @@
             this.uiTxtPNome.TabIndex = 1;
             this.uiTxtPNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.uiTxtPNome.ValidadeType = uiCSB.Component.uiTextBox.Validate.NotNull;
+            // 
+            // picProfilePhoto
+            // 
+            this.picProfilePhoto.Image = global::Etherchain.Desktop.Properties.Resources.unknown;
+            this.picProfilePhoto.Location = new System.Drawing.Point(10, 7);
+            this.picProfilePhoto.Name = "picProfilePhoto";
+            this.picProfilePhoto.Size = new System.Drawing.Size(67, 65);
+            this.picProfilePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProfilePhoto.TabIndex = 24;
+            this.picProfilePhoto.TabStop = false;
             // 
             // uctFuncionario
             // 
