@@ -12,6 +12,8 @@ using caiosb.Util;
 using Etherchain.Desktop;
 using Etherchain.Common;
 using caiosb.Util.Data;
+using Etherchain.Control;
+using Etherchain.Control.Executive;
 
 namespace Etherchain.Formularios
 {
@@ -38,7 +40,7 @@ namespace Etherchain.Formularios
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width - 3, Height - 3, 20, 20));
             //pnlBackground.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlBackground.Width, pnlBackground.Height, 20, 20));
 
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctBase);
+            UtilChangePanel.MudarConteudo(pnlConteudo, new uctBase());
 
             lblNome.Text = AppDesktop.ActualEmployee.FirstName + " " + AppDesktop.ActualEmployee.LastName;
             picProfilePhoto.Image = UtilImage.ByteToImage(AppDesktop.ActualArchive.Blob);
@@ -106,12 +108,12 @@ namespace Etherchain.Formularios
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctClientes);
+            UtilChangePanel.MudarConteudo(pnlConteudo, new uctClientes());
         }
 
         private void picProfilePhoto_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctBase);
+            UtilChangePanel.MudarConteudo(pnlConteudo, new uctBase());
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -121,22 +123,22 @@ namespace Etherchain.Formularios
 
         private void btnSupport_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctSupport);
+            //UtilChangePanel.MudarConteudo(pnlConteudo, uctSupport);
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctSettings);
+            UtilChangePanel.MudarConteudo(pnlConteudo, new uctSettings());
         }
 
         private void btnBackup_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctBackup);
+            UtilChangePanel.MudarConteudo(pnlConteudo, new uctBackup());
         }
 
         private void btnExecutive_Click(object sender, EventArgs e)
         {
-            UtilChangePanel.MudarConteudo(pnlConteudo, uctExecutive);
+            UtilChangePanel.MudarConteudo(pnlConteudo, new uctExecutive());
         }
     }
 }

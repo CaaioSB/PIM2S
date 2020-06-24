@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
-            this.pnlBackground = new System.Windows.Forms.Panel();
             this.uiMinimize = new uiCSB.Component.uiPicture();
             this.pnlConteudo = new System.Windows.Forms.Panel();
-            this.uctExecutive = new Etherchain.Control.Executive.uctExecutive();
-            this.uctBackup = new Etherchain.Control.Executive.uctBackup();
-            this.uctSettings = new Etherchain.Control.uctSettings();
-            this.uctClientes = new Etherchain.Control.uctClientes();
             this.uctSupport = new Etherchain.Control.uctSupport();
-            this.uctBase = new Etherchain.Control.uctBase();
             this.iconPicture2 = new uiCSB.Component.uiPicture();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -48,7 +41,7 @@
             this.btnConfig = new uiCSB.Component.uiPicture();
             this.btnExit = new uiCSB.Component.uiPicture();
             this.btnClientes = new uiCSB.Component.uiPicture();
-            this.pnlBackground.SuspendLayout();
+            this.pnlBackground = new uiCSB.Component.uiPanel();
             ((System.ComponentModel.ISupportInitialize)(this.uiMinimize)).BeginInit();
             this.pnlConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).BeginInit();
@@ -60,20 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClientes)).BeginInit();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlBackground
-            // 
-            this.pnlBackground.BackColor = System.Drawing.Color.White;
-            this.pnlBackground.Controls.Add(this.uiMinimize);
-            this.pnlBackground.Controls.Add(this.pnlConteudo);
-            this.pnlBackground.Controls.Add(this.iconPicture2);
-            this.pnlBackground.Controls.Add(this.iconPictureBox2);
-            this.pnlBackground.Location = new System.Drawing.Point(83, 3);
-            this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(864, 644);
-            this.pnlBackground.TabIndex = 0;
-            this.pnlBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // uiMinimize
             // 
@@ -99,48 +80,11 @@
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.uctExecutive);
-            this.pnlConteudo.Controls.Add(this.uctBackup);
-            this.pnlConteudo.Controls.Add(this.uctSettings);
-            this.pnlConteudo.Controls.Add(this.uctClientes);
             this.pnlConteudo.Controls.Add(this.uctSupport);
-            this.pnlConteudo.Controls.Add(this.uctBase);
             this.pnlConteudo.Location = new System.Drawing.Point(16, 61);
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(839, 578);
             this.pnlConteudo.TabIndex = 6;
-            // 
-            // uctExecutive
-            // 
-            this.uctExecutive.BackColor = System.Drawing.Color.White;
-            this.uctExecutive.Location = new System.Drawing.Point(0, 247);
-            this.uctExecutive.Name = "uctExecutive";
-            this.uctExecutive.Size = new System.Drawing.Size(834, 568);
-            this.uctExecutive.TabIndex = 11;
-            // 
-            // uctBackup
-            // 
-            this.uctBackup.BackColor = System.Drawing.Color.White;
-            this.uctBackup.Location = new System.Drawing.Point(444, 123);
-            this.uctBackup.Name = "uctBackup";
-            this.uctBackup.Size = new System.Drawing.Size(834, 568);
-            this.uctBackup.TabIndex = 10;
-            // 
-            // uctSettings
-            // 
-            this.uctSettings.BackColor = System.Drawing.Color.White;
-            this.uctSettings.Location = new System.Drawing.Point(0, 123);
-            this.uctSettings.Name = "uctSettings";
-            this.uctSettings.Size = new System.Drawing.Size(834, 568);
-            this.uctSettings.TabIndex = 9;
-            // 
-            // uctClientes
-            // 
-            this.uctClientes.BackColor = System.Drawing.Color.White;
-            this.uctClientes.Location = new System.Drawing.Point(444, 0);
-            this.uctClientes.Name = "uctClientes";
-            this.uctClientes.Size = new System.Drawing.Size(834, 568);
-            this.uctClientes.TabIndex = 8;
             // 
             // uctSupport
             // 
@@ -148,17 +92,8 @@
             this.uctSupport.Location = new System.Drawing.Point(0, 0);
             this.uctSupport.Name = "uctSupport";
             this.uctSupport.Size = new System.Drawing.Size(834, 568);
-            this.uctSupport.TabIndex = 7;
-            // 
-            // uctBase
-            // 
-            this.uctBase.BackColor = System.Drawing.Color.White;
-            this.uctBase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uctBase.BackgroundImage")));
-            this.uctBase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.uctBase.Location = new System.Drawing.Point(5, 23);
-            this.uctBase.Name = "uctBase";
-            this.uctBase.Size = new System.Drawing.Size(834, 568);
-            this.uctBase.TabIndex = 6;
+            this.uctSupport.TabIndex = 0;
+            this.uctSupport.Visible = false;
             // 
             // iconPicture2
             // 
@@ -325,6 +260,22 @@
             this.btnClientes.uiSize = 40;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.White;
+            this.pnlBackground.Controls.Add(this.uiMinimize);
+            this.pnlBackground.Controls.Add(this.pnlConteudo);
+            this.pnlBackground.Controls.Add(this.iconPicture2);
+            this.pnlBackground.Controls.Add(this.iconPictureBox2);
+            this.pnlBackground.Draggable = true;
+            this.pnlBackground.Location = new System.Drawing.Point(83, 3);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.PanelColor = System.Drawing.Color.White;
+            this.pnlBackground.PanelRadius = 5;
+            this.pnlBackground.Size = new System.Drawing.Size(864, 644);
+            this.pnlBackground.TabIndex = 0;
+            this.pnlBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,7 +297,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmBase_Load);
-            this.pnlBackground.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiMinimize)).EndInit();
             this.pnlConteudo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPicture2)).EndInit();
@@ -358,13 +308,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClientes)).EndInit();
+            this.pnlBackground.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlBackground;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox picProfilePhoto;
 
@@ -372,18 +321,14 @@
         private uiCSB.Component.uiPicture btnClientes;
         private uiCSB.Component.uiPicture iconPicture2;
         private uiCSB.Component.uiPicture btnExit;
-        private Control.uctBase uctBase;
         public System.Windows.Forms.Panel pnlConteudo;
         private uiCSB.Component.uiPicture uiMinimize;
         private uiCSB.Component.uiPicture btnConfig;
         private uiCSB.Component.uiPicture btnSupport;
-        private Control.uctSupport uctSupport;
-        private Control.uctClientes uctClientes;
-        private Control.uctSettings uctSettings;
         private uiCSB.Component.uiPicture btnBackup;
         private uiCSB.Component.uiPicture btnExecutive;
-        private Control.Executive.uctBackup uctBackup;
-        private Control.Executive.uctExecutive uctExecutive;
+        private Control.uctSupport uctSupport;
+        private uiCSB.Component.uiPanel pnlBackground;
     }
 }
 
