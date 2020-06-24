@@ -83,6 +83,16 @@ namespace Etherchain.Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bitcoin {
+            get {
+                object obj = ResourceManager.GetObject("bitcoin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap executive {
             get {
                 object obj = ResourceManager.GetObject("executive", resourceCulture);
@@ -186,6 +196,16 @@ namespace Etherchain.Desktop.Properties {
         internal static System.Drawing.Bitmap unDrawMale {
             get {
                 object obj = ResourceManager.GetObject("unDrawMale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unknown {
+            get {
+                object obj = ResourceManager.GetObject("unknown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
