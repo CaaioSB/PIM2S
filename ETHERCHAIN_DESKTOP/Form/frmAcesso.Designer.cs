@@ -123,6 +123,7 @@
             this.uiTxtCPF.Size = new System.Drawing.Size(399, 18);
             this.uiTxtCPF.TabIndex = 1;
             this.uiTxtCPF.Text = "49355294824";
+            this.uiTxtCPF.ValidadeType = uiCSB.Component.uiTextBox.Validate.None;
             // 
             // uiTxtHash
             // 
@@ -136,6 +137,7 @@
             this.uiTxtHash.Size = new System.Drawing.Size(399, 18);
             this.uiTxtHash.TabIndex = 2;
             this.uiTxtHash.Text = "302010cc";
+            this.uiTxtHash.ValidadeType = uiCSB.Component.uiTextBox.Validate.None;
             // 
             // ui8or9
             // 
@@ -243,11 +245,12 @@
             this.uiPanel1.Controls.Add(this.lblDescControl);
             this.uiPanel1.Controls.Add(this.lblTextControl);
             this.uiPanel1.Controls.Add(this.picImageControl);
-            this.uiPanel1.Location = new System.Drawing.Point(12, 12);
+            this.uiPanel1.Draggable = true;
+            this.uiPanel1.Location = new System.Drawing.Point(0, 0);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.uiPanel1.PanelRadius = 5;
-            this.uiPanel1.Size = new System.Drawing.Size(517, 100);
+            this.uiPanel1.PanelRadius = 0;
+            this.uiPanel1.Size = new System.Drawing.Size(540, 112);
             this.uiPanel1.TabIndex = 0;
             // 
             // uiExit
@@ -260,7 +263,7 @@
             this.uiExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.uiExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiExit.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiExit.Location = new System.Drawing.Point(472, 3);
+            this.uiExit.Location = new System.Drawing.Point(495, 3);
             this.uiExit.Name = "uiExit";
             this.uiExit.OnHoverBorderColor = System.Drawing.Color.White;
             this.uiExit.OnHoverButtonColor = System.Drawing.Color.DarkRed;
@@ -278,7 +281,7 @@
             this.lblDescControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.lblDescControl.Font = new System.Drawing.Font("Gadugi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(182)))), ((int)(((byte)(194)))));
-            this.lblDescControl.Location = new System.Drawing.Point(109, 43);
+            this.lblDescControl.Location = new System.Drawing.Point(109, 45);
             this.lblDescControl.Name = "lblDescControl";
             this.lblDescControl.Size = new System.Drawing.Size(343, 19);
             this.lblDescControl.TabIndex = 9;
@@ -290,7 +293,7 @@
             this.lblTextControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
             this.lblTextControl.Font = new System.Drawing.Font("Gadugi", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(63)))), ((int)(((byte)(153)))));
-            this.lblTextControl.Location = new System.Drawing.Point(106, 8);
+            this.lblTextControl.Location = new System.Drawing.Point(106, 10);
             this.lblTextControl.Name = "lblTextControl";
             this.lblTextControl.Size = new System.Drawing.Size(92, 35);
             this.lblTextControl.TabIndex = 8;
@@ -300,9 +303,9 @@
             // 
             this.picImageControl.BackColor = System.Drawing.Color.Transparent;
             this.picImageControl.Image = global::Etherchain.Desktop.Properties.Resources.securityon;
-            this.picImageControl.Location = new System.Drawing.Point(6, 8);
+            this.picImageControl.Location = new System.Drawing.Point(6, 13);
             this.picImageControl.Name = "picImageControl";
-            this.picImageControl.Size = new System.Drawing.Size(98, 83);
+            this.picImageControl.Size = new System.Drawing.Size(100, 85);
             this.picImageControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImageControl.TabIndex = 7;
             this.picImageControl.TabStop = false;
