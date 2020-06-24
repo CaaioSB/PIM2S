@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace uiCSB.Component
 {
     public class uiPanel : Panel
@@ -13,6 +14,12 @@ namespace uiCSB.Component
         private Color _panelColor = Color.FromArgb(242, 245, 255);
 
         private int _panelRadius = 5;
+        private bool draggable = false;
+
+
+        public int mov;
+        public int movY;
+        public int movX;
 
         public uiPanel()
         {
@@ -39,6 +46,8 @@ namespace uiCSB.Component
             }
         }
 
+        public bool Draggable { get => draggable; set => draggable = value; }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -56,6 +65,42 @@ namespace uiCSB.Component
             RoundedRectangle.FillRoundedRectangle(e.Graphics, brush, roundedRectangle, _panelRadius);
 
             brush.Dispose();
+        }
+
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            //base.OnMouseDown(e);
+
+            if (Draggable)
+            {
+                mov = 1;
+                movX = e.X;
+                movY = e.Y;
+            }
+        }
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            //base.OnMouseMove(e);
+
+            if (Draggable)
+            {
+                if (mov == 1)
+                {
+                    Form form = Application.OpenForms[0];
+                    form.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+                }
+            }
+        }
+
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
+            //base.OnMouseUp(e);
+
+            if (Draggable)
+            {
+                mov = 0;
+            }
         }
     }
 }
