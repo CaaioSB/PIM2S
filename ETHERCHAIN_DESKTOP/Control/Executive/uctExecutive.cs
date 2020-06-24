@@ -29,5 +29,10 @@ namespace Etherchain.Control.Executive
         {
             UtilChangePanel.MudarConteudo(uiPanelConteudo, new uctAcesso());
         }
+
+        private void uiBtnCriptomoeda_Click(object sender, EventArgs e)
+        {
+            UtilChangePanel.MudarConteudo(uiPanelConteudo, new uctCriptomoeda());
+        }
     }
 }

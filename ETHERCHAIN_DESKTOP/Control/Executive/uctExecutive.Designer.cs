@@ -31,17 +31,17 @@
             this.uiPanelControl = new uiCSB.Component.uiPanel();
             this.lblDescControl = new System.Windows.Forms.Label();
             this.lblTextControl = new System.Windows.Forms.Label();
-            this.picImageControl = new System.Windows.Forms.PictureBox();
             this.uiFlowPanel1 = new uiCSB.Component.uiFlowPanel();
             this.uiBtnFuncionario = new uiCSB.Component.uiButton();
             this.uiBtnAcesso = new uiCSB.Component.uiButton();
-            this.uiButton1 = new uiCSB.Component.uiButton();
+            this.uiBtnCriptomoeda = new uiCSB.Component.uiButton();
             this.uiButton3 = new uiCSB.Component.uiButton();
             this.uiButton2 = new uiCSB.Component.uiButton();
             this.uiPanelConteudo = new uiCSB.Component.uiPanel();
+            this.picImageControl = new System.Windows.Forms.PictureBox();
             this.uiPanelControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageControl)).BeginInit();
             this.uiFlowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageControl)).BeginInit();
             this.SuspendLayout();
             // 
             // uiPanelControl
@@ -80,22 +80,11 @@
             this.lblTextControl.TabIndex = 5;
             this.lblTextControl.Text = "Executive";
             // 
-            // picImageControl
-            // 
-            this.picImageControl.BackColor = System.Drawing.Color.Transparent;
-            this.picImageControl.Image = global::Etherchain.Desktop.Properties.Resources.executive;
-            this.picImageControl.Location = new System.Drawing.Point(12, 20);
-            this.picImageControl.Name = "picImageControl";
-            this.picImageControl.Size = new System.Drawing.Size(124, 84);
-            this.picImageControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImageControl.TabIndex = 4;
-            this.picImageControl.TabStop = false;
-            // 
             // uiFlowPanel1
             // 
             this.uiFlowPanel1.Controls.Add(this.uiBtnFuncionario);
             this.uiFlowPanel1.Controls.Add(this.uiBtnAcesso);
-            this.uiFlowPanel1.Controls.Add(this.uiButton1);
+            this.uiFlowPanel1.Controls.Add(this.uiBtnCriptomoeda);
             this.uiFlowPanel1.Controls.Add(this.uiButton3);
             this.uiFlowPanel1.Controls.Add(this.uiButton2);
             this.uiFlowPanel1.FlowPanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
@@ -146,25 +135,26 @@
             this.uiBtnAcesso.UseVisualStyleBackColor = false;
             this.uiBtnAcesso.Click += new System.EventHandler(this.uiBtnAcesso_Click);
             // 
-            // uiButton1
+            // uiBtnCriptomoeda
             // 
-            this.uiButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
-            this.uiButton1.FlatAppearance.BorderSize = 0;
-            this.uiButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiButton1.Location = new System.Drawing.Point(335, 3);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
-            this.uiButton1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
-            this.uiButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.uiButton1.Size = new System.Drawing.Size(161, 84);
-            this.uiButton1.TabIndex = 9;
-            this.uiButton1.Text = "CRIPTOMOEDA";
-            this.uiButton1.TextColor = System.Drawing.Color.White;
-            this.uiButton1.UseVisualStyleBackColor = false;
+            this.uiBtnCriptomoeda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnCriptomoeda.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnCriptomoeda.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(84)))), ((int)(((byte)(179)))));
+            this.uiBtnCriptomoeda.FlatAppearance.BorderSize = 0;
+            this.uiBtnCriptomoeda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.uiBtnCriptomoeda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.uiBtnCriptomoeda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiBtnCriptomoeda.Location = new System.Drawing.Point(335, 3);
+            this.uiBtnCriptomoeda.Name = "uiBtnCriptomoeda";
+            this.uiBtnCriptomoeda.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(235)))), ((int)(((byte)(255)))));
+            this.uiBtnCriptomoeda.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(65)))), ((int)(((byte)(179)))));
+            this.uiBtnCriptomoeda.OnHoverTextColor = System.Drawing.Color.White;
+            this.uiBtnCriptomoeda.Size = new System.Drawing.Size(161, 84);
+            this.uiBtnCriptomoeda.TabIndex = 9;
+            this.uiBtnCriptomoeda.Text = "CRIPTOMOEDA";
+            this.uiBtnCriptomoeda.TextColor = System.Drawing.Color.White;
+            this.uiBtnCriptomoeda.UseVisualStyleBackColor = false;
+            this.uiBtnCriptomoeda.Click += new System.EventHandler(this.uiBtnCriptomoeda_Click);
             // 
             // uiButton3
             // 
@@ -215,6 +205,17 @@
             this.uiPanelConteudo.Size = new System.Drawing.Size(834, 319);
             this.uiPanelConteudo.TabIndex = 11;
             // 
+            // picImageControl
+            // 
+            this.picImageControl.BackColor = System.Drawing.Color.Transparent;
+            this.picImageControl.Image = global::Etherchain.Desktop.Properties.Resources.executive;
+            this.picImageControl.Location = new System.Drawing.Point(12, 20);
+            this.picImageControl.Name = "picImageControl";
+            this.picImageControl.Size = new System.Drawing.Size(124, 84);
+            this.picImageControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImageControl.TabIndex = 4;
+            this.picImageControl.TabStop = false;
+            // 
             // uctExecutive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,8 +228,8 @@
             this.Size = new System.Drawing.Size(834, 568);
             this.uiPanelControl.ResumeLayout(false);
             this.uiPanelControl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageControl)).EndInit();
             this.uiFlowPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picImageControl)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +242,7 @@
         private System.Windows.Forms.PictureBox picImageControl;
         private uiCSB.Component.uiFlowPanel uiFlowPanel1;
         private uiCSB.Component.uiButton uiBtnFuncionario;
-        private uiCSB.Component.uiButton uiButton1;
+        private uiCSB.Component.uiButton uiBtnCriptomoeda;
         private uiCSB.Component.uiButton uiButton2;
         private uiCSB.Component.uiButton uiButton3;
         private uiCSB.Component.uiButton uiBtnAcesso;
