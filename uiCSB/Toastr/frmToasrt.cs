@@ -98,7 +98,7 @@ namespace uiCSB
                 {
                     this.Name = fname;
                     this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 15;
-                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - lblMsg.Height * i;
+                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - lblMsg.Height * i - 50;
                     this.Location = new Point(this.x, this.y);
                     break;
 
