@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text;
 
 namespace caiosb.Util.Data
@@ -39,7 +40,7 @@ namespace caiosb.Util.Data
             return null;
         }
 
-        public static decimal ToDecimal(object val) => Convert.ToDecimal(val);
+        public static decimal ToDecimal(object val) => Decimal.Parse(val.ToString(), NumberStyles.AllowDecimalPoint);
 
         public static DateTime? ToNullableDateTime(object val)
         {
@@ -49,6 +50,7 @@ namespace caiosb.Util.Data
         }
 
         public static DateTime ToDateTime(object val) => Convert.ToDateTime(val);
+        public static DateTime ToDate(object val) => Convert.ToDateTime(val).Date;
 
         public static string ToString(object val) => Convert.ToString(val);
 
