@@ -1,44 +1,38 @@
-﻿using System;
+﻿using caiosb.Util.Data;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Etherchain.Common
 {
-    class Founds
+    public class Founds
     {
-        private int _foundsId;
-        private byte _addressId;
+        private int _walletId;
         private int _cryptoCurrencyId;
-        private int _cryptoCurrencyReceived;
-        private int _cryptoCurrencySent;
-        private int _cryptoCurrencyBalance;
+        private decimal _cryptoCurrencyReceived;
+        private decimal _cryptoCurrencySent;
+        private decimal _cryptoCurrencyBalance;
         private int _cryptoCurrencyNTX;
 
-        public int FoundsId { get => _foundsId; set => _foundsId = value; }
-        public byte AddressId { get => _addressId; set => _addressId = value; }
+        public int WalletId { get => _walletId; set => _walletId = value; }
         public int CryptoCurrencyId { get => _cryptoCurrencyId; set => _cryptoCurrencyId = value; }
-        public int CryptoCurrencyReceived { get => _cryptoCurrencyReceived; set => _cryptoCurrencyReceived = value; }
-        public int CryptoCurrencySent { get => _cryptoCurrencySent; set => _cryptoCurrencySent = value; }
-        public int CryptoCurrencyBalance { get => _cryptoCurrencyBalance; set => _cryptoCurrencyBalance = value; }
+        public decimal CryptoCurrencyReceived { get => _cryptoCurrencyReceived; set => _cryptoCurrencyReceived = value; }
+        public decimal CryptoCurrencySent { get => _cryptoCurrencySent; set => _cryptoCurrencySent = value; }
+        public decimal CryptoCurrencyBalance { get => _cryptoCurrencyBalance; set => _cryptoCurrencyBalance = value; }
         public int CryptoCurrencyNTX { get => _cryptoCurrencyNTX; set => _cryptoCurrencyNTX = value; }
 
-        public Founds ObterPorId()
+        private Founds obter(SqlDataReader reader) => new Founds
         {
-            return new Founds();
-        }
-
-        public Founds ObterPorAddress()
-        {
-            return new Founds();
-        }
-
-        public Founds ObterTodos()
-        {
-            return new Founds();
-        }
-        public bool Gravar() { return false; }
-        public bool AlterarPorId() { return false; }
+            WalletId = UtilConvert.ToInt(reader["WALLET_ID"]),
+            CryptoCurrencyId = UtilConvert.ToInt(reader["CRYPTOCURRENCY_ID"]),
+            CryptoCurrencyReceived = UtilConvert.ToDecimal(reader["CRYPTOCURRENCY_RECEIVED"]),
+            CryptoCurrencySent = UtilConvert.ToDecimal(reader["CRYPTOCURRENCY_SENT"]),
+            CryptoCurrencyBalance = UtilConvert.ToDecimal(reader["CRYPTOCURRENCY_BALANCE"]),
+            CryptoCurrencyNTX = UtilConvert.ToInt(reader["CRYPTOCURRENCY_NTX"])
+        };
     }
 }
