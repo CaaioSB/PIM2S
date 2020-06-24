@@ -126,6 +126,12 @@
     <Compile Include="Control\Executive\uctBackup.Designer.cs">
       <DependentUpon>uctBackup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\Executive\uctCriptomoeda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Executive\uctCriptomoeda.Designer.cs">
+      <DependentUpon>uctCriptomoeda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\Executive\uctExecutive.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     <EmbeddedResource Include="Control\Executive\uctBackup.resx">
       <DependentUpon>uctBackup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Executive\uctCriptomoeda.resx">
+      <DependentUpon>uctCriptomoeda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Executive\uctExecutive.resx">
       <DependentUpon>uctExecutive.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +275,7 @@
     <None Include="Resources\verific.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\unknown.png" />
     <None Include="Resources\spreadshet.png" />
     <None Include="Resources\securityon.png" />
     <None Include="Resources\authentication.png" />
@@ -277,6 +287,7 @@
     <None Include="Resources\timeline.png" />
     <None Include="Resources\queue.png" />
     <None Include="Resources\executive.png" />
+    <None Include="Resources\bitcoin.png" />
     <Content Include="Resources\unDrawMale.png" />
   </ItemGroup>
   <ItemGroup>
