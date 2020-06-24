@@ -13,15 +13,28 @@ namespace caiosb.Util
         {
             foreach (UserControl control in pnlConteudo.Controls)
             {
-                control.Visible = false;
+                if (control.Name != "uctSupport")
+                {
+                    ((Control)control).Dispose();
+                }
+                else
+                {
+                    control.Visible = false;
+                }
             }
 
-            pnlConteudo.Controls.Add(userControl);
-
-            userControl.Location = new System.Drawing.Point(0, 0);
-
-            userControl.Visible = true;
+            if (userControl.Name == "uctSupport")
+            {
+                userControl.Visible = true;
+                userControl.Location = new System.Drawing.Point(0, 0);
+            }
+            else
+            {
+                pnlConteudo.Controls.Add(userControl);
+                userControl.Location = new System.Drawing.Point(0, 0);
+                userControl.Show();
+                //userControl.Visible = true;
+            }
         }
-
     }
 }
